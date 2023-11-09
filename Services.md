@@ -5,7 +5,7 @@ Services are a way to organize and share code across your application, helping y
 
 In Angular, services are classes that are used to organize and share code across your application. They're typically used to provide functionality that can be used by multiple components, like retrieving data from an API or handling user authentication.
 
-Services are typically created using the @Injectable decorator, which tells Angular that this class can be used as a service. You can then inject this service into any component, directive, or other service using Angular's dependency injection system.
+Services are typically created using the<b> @Injectable</b>decorator, which tells Angular that this class can be used as a service. You can then inject this service into any component, directive, or other service using Angular's dependency injection system.
 
 One of the most important aspects of services is that they're singletons, meaning that there's only one instance of a service created, no matter how many times it's injected. This is important because it helps to reduce memory usage and ensures that all components are using the same instance of the service.
 
