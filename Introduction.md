@@ -1,28 +1,53 @@
-<b>Angular</b> is a JavaScript framework for building both client and server-side apps. 
-Angular, a front-end framework for building robust, cross-platform, client-side applications.
-Angular is component centric framework that is a complete rewrite of AngularJS. It uses Typescript as a default language to create apps in. 
-The JavaScript and web world has changed a lot in few years.  Web Applications could be server side rendered or client side rendered.
 
-### Server-side rendered
-In server-side rendered web applications, most of the application’s logic resides on the server, and remains there. The user basically enters the URL, the request gets send to the server, which then produces the final HTML containing the requested data and sends that back to the browser which simply renders it out. When the user interacts with the page, that request gets again sent to the server, which in turn generates a new HTML page and serves it back to the browser.
 
-### Client-side rendered
-Modern web pages often require to work more like applications do on the desktop, though. People demand for a much better user experience, more interactivity, fast transitions between “pages” and even offline capabilities. That’s where the so-called SPAs (Single Page Applications) come into play.
-When the user enters the URL, the web server responds with an HTML page, but also with a set of resources (JavaScript files and images) that make up our client-side application. The browser receives that, loads the JavaScript application and “boots it”. Now it’s the job of that application to dynamically generate the user interface (HTML) based on the data, right from within the browser. After that happens, every new user action doesn’t reload the entire web site again, but rather the data for that specific user interaction is send to the server (usually by using the JSON format) and the server in turn responds with the just the amount of data requested by the JavaScript client, again using JSON (normally). The JavaScript application gets the data, parses it and dynamically generates HTML code which is shown to the user.
- 
+<o>From social media to healthcare, from ecommerce to online banking, billions of people worldwide use web and mobile applications for almost everything. These apps are convenient and help us with our day-to-day lives, offering seamless user experiences and interfaces. How are these apps developed to provide such reliability? Part of the credit goes to widely used frameworks like Angular, making it easy to create robust apps.
+</p>
 
-As you can see, the amount of data that is being exchanged is very optimized. However, a big downside of such type of applications is that the startup time is usually much longer. You might already have figured why: well, because the browser doesn’t get the HTML code to show, but rather a bunch of JavaScript files that need to be interpreted, and executed, and which in turn then generates the final HTML to be shown to the user.
+### What Is Angular?
+Angular is an open-source, JavaScript framework written in TypeScript. Google maintains it, and its primary purpose is to develop single-page applications. As a framework, Angular has clear advantages while also providing a standard structure for developers to work with. It enables users to create large applications in a maintainable manner. 
 
-Learning curve?
-•	Both Angular and React have steep learning curves. Angular is written in TypeScript, a superset of JavaScript that brings type checking to JS. 
-•	As a framework, Angular also relies heavily on dependency injection (DI). This can take some getting used to as Angular introduces a lot of magical boilerplate code that's confusing and hard to pick up. Things like annotations, providers, decorators can be hard to understand with Angular 2.
-•	React takes some getting used to as well. It uses JSX for rendering DOM templates. While JSX allows developers to construct templates directly in JavaScript code, it doesn't exactly match up with classic HTML. JSX syntax can take some getting used to even if your an experienced web developer.
-•	Additionally, React relies heavily on third party libraries to supplement it's core functionality. For example, you need an external library for AJAX calls (Axios) and routing. While this provides developers with more architectural design freedom, it also makes things harder to standardize with React. This can drastically increase learning curves and the ability for new developers to "jump in" to an existing React code base.
-•	Both React and Angular require preprocessing or transpiling of assets. While bundlers like Webpack make configuration easier, it's equally challenging to set up development environments for React and Angular for first timers. Unlike jQuery or other JavaScript libraries, you can't just throw in a CDN reference and start programming with Angular or React (this is not the case for Angular 1, so there's one thing the original still has going for it!).
-How well is it supported?
-•	React is backed by Facebook. Angular by Google. Next topic.
-•	The competing strength of these ecosystems keeps both competitive. While Angular has TypeScript, React has Flow for type checking. While Angular has a great CLI, React has create-react-app. React has React Native. Angular has Ionic. Angular Universal allows for server-side rendering, but so does React's next.js.
-•	The point is that these competitors have strong communities backing them. Each one seems to answer any deficiencies with their own solutions. For these reasons, choosing React vs Angular is largely a personal preference.
-Performance?
-Ever since Angular abandoned the idea of bidirectional data flow and the digest cycle, the difference between Angular and React performance is negligible. Both React and Angular leverage unidirectional data flow and the virtual DOM to improve rendering. While React may have a slight edge in some circumstances, basing your decision around performance is silly with React and Angular.
- 
+
+### Why Do You Need a Framework?
+Frameworks in general boost web development efficiency and performance by providing a consistent structure so that developers don’t have to keep rebuilding code from scratch. Frameworks are time savers that offer developers a host of extra features that can be added to software without requiring extra effort.
+
+
+avaScript is the most commonly used client-side scripting language. It is written into HTML documents to enable interactions with web pages in many unique ways. As a relatively easy-to-learn language with pervasive support, it is well-suited to develop modern applications. 
+
+But is JavaScript ideal for developing single-page applications that require modularity, testability, and developer productivity? Perhaps not. 
+
+These days, we have a variety of frameworks and libraries designed to provide alternative solutions. With respect to front-end web development, Angular addresses many, if not all, of the issues developers face when using JavaScript on its own.
+
+
+What are the Different Angular Versions: 
+“Angular” is the catch-all term for the various framework versions out there. Angular was developed in 2009, and as a result, there have been many iterations.
+
+First, there was the original Angular, called Angular 1 and eventually known as AngularJS. Then came Angulars 2, 3, 4, 5, until finally, the current version, Angular 15, released on 11/11/2022. Each subsequent Angular version improves on its predecessor, fixing bugs, addressing issues, and accommodating increasing complexity of current platforms.
+
+If you want to design apps better suited for mobile devices, and/or more complex apps, you had best to upgrade to its current version.
+
+Features of Angular
+1. Document Object Model 
+DOM (Document Object Model) treats an XML or HTML document as a tree structure in which each node represents a part of the document.
+
+Angular uses regular DOM. Consider that ten updates are made on the same HTML page. Instead of updating the ones that were already updated, Angular will update the entire tree structure of HTML tags.
+
+2. TypeScript 
+TypeScript defines a set of types to JavaScript, which helps users write JavaScript code that is easier to understand. All of the TypeScript code compiles with JavaScript and can run smoothly on any platform. TypeScript is not compulsory for developing an Angular application. However, it is highly recommended as it offers better syntactic structure—while making the codebase easier to understand and maintain. 
+
+You can install TypeScript as an NPM package with the following command:
+
+npm install -g typescript
+
+3. Data Binding
+Data binding is a process that enables users to manipulate web page elements through a web browser. It employs dynamic HTML and does not require complex scripting or programming. Data binding is used in web pages that include interactive components, such as calculators, tutorials, forums, and games. It also enables a better incremental display of a web page when pages contain a large amount of data. 
+
+Angular uses the two-way binding. The model state reflects any changes made in the corresponding UI elements. Conversely, the UI state reflects any changes in the model state. This feature enables the framework to connect the DOM to the model data through the controller.
+
+
+4. Testing 
+
+Angular uses the Jasmine testing framework. The Jasmine framework provides multiple functionalities to write different kinds of test cases. Karma is the task-runner for the tests that uses a configuration file to set the start-up, reporters, and testing framework.
+
+Now that you’re familiar with Angular’s basic features, you need to understand its architecture if you want to work with Angular daily. You can also expand your Angular knowledge by taking the Angular Certification Training Course and learning concepts such as TypeScript, Bootstrap Grid System, dependency injections, SPA, forms, pipes, promises, observables, and Angular class testing.
+
+To continue learning what is Angular, let’s move on to architecture
