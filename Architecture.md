@@ -26,7 +26,7 @@ Angular is a full-fledged model-view-controller (MVC) framework. It provides cle
 
 Angular comes with its own set of advantages 
 
-1. <b>Custom Components<b>
+1. <b>Custom Components</b>
 <p>Angular enables users to build their own components that can pack functionality along with rendering logic into reusable pieces. It also plays well with web components.</p>
 
 2.<b> Data Binding</b>
