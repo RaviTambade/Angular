@@ -26,26 +26,26 @@
 ## Features of Angular
 
 1. <b>Document Object Model </b>
-
-<p>DOM (Document Object Model) treats an XML or HTML document as a tree structure in which each node represents a part of the document.</p>
-
-<p>Angular uses regular DOM. Consider that ten updates are made on the same HTML page. Instead of updating the ones that were already updated, Angular will update the entire tree structure of HTML tags.</p>
+    <p>DOM (Document Object Model) treats an XML or HTML document as a tree structure in which each node represents a part of the document.</p>
+    <p>Angular uses regular DOM. Consider that ten updates are made on the same HTML page. Instead of updating the ones that were already updated, Angular will update the entire tree structure of HTML tags.</p>
 
 2. <b>TypeScript </b>
-<p>TypeScript defines a set of types to JavaScript, which helps users write JavaScript code that is easier to understand. All of the TypeScript code compiles with JavaScript and can run smoothly on any platform. TypeScript is not compulsory for developing an Angular application. However, it is highly recommended as it offers better syntactic structure—while making the codebase easier to understand and maintain. </p>
+    <p>TypeScript defines a set of types to JavaScript, which helps users write JavaScript code that is easier to understand. All of the TypeScript code compiles with JavaScript and can run smoothly on any platform. TypeScript is not compulsory for developing an Angular application. However, it is highly recommended as it offers better syntactic structure—while making the codebase easier to understand and maintain. </p>
 
 You can install TypeScript as an NPM package with the following command:
 
+```
 npm install -g typescript
+```
 
 3. <b>Data Binding</b>
-<p>Data binding is a process that enables users to manipulate web page elements through a web browser. It employs dynamic HTML and does not require complex scripting or programming. Data binding is used in web pages that include interactive components, such as calculators, tutorials, forums, and games. It also enables a better incremental display of a web page when pages contain a large amount of data. </p>
+    <p>Data binding is a process that enables users to manipulate web page elements through a web browser. It employs dynamic HTML and does not require complex scripting or programming. Data binding is used in web pages that include interactive components, such as calculators, tutorials, forums, and games. It also enables a better incremental display of a web page when pages contain a large amount of data. </p>
 
-<p>Angular uses the two-way binding. The model state reflects any changes made in the corresponding UI elements. Conversely, the UI state reflects any changes in the model state. This feature enables the framework to connect the DOM to the model data through the controller.</p>
+    <p>Angular uses the two-way binding. The model state reflects any changes made in the corresponding UI elements. Conversely, the UI state reflects any changes in the model state. This feature enables the framework to connect the DOM to the model data through the controller.</p>
 
 
 4. <b>Testing </b>
 
-<p>Angular uses the Jasmine testing framework. The Jasmine framework provides multiple functionalities to write different kinds of test cases. Karma is the task-runner for the tests that uses a configuration file to set the start-up, reporters, and testing framework.</p>
+    <p>Angular uses the Jasmine testing framework. The Jasmine framework provides multiple functionalities to write different kinds of test cases. Karma is the task-runner for the tests that uses a configuration file to set the start-up, reporters, and testing framework.</p>
 
-<p>Now that you’re familiar with Angular’s basic features, you need to understand its architecture if you want to work with Angular daily. You can also expand your Angular knowledge by taking the Angular Certification Training Course and learning concepts such as TypeScript, Bootstrap Grid System, dependency injections, SPA, forms, pipes, promises, observables, and Angular class testing.</p>
+    <p>Now that you’re familiar with Angular’s basic features, you need to understand its architecture if you want to work with Angular daily. You can also expand your Angular knowledge by taking the Angular Certification Training Course and learning concepts such as TypeScript, Bootstrap Grid System, dependency injections, SPA, forms, pipes, promises, observables, and Angular class testing.</p>
