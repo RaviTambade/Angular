@@ -146,4 +146,4 @@ In this example, we've created a LoginComponent class that uses the AuthService 
 
 Services are an essential part of Angular development, and they can help to improve code organization, maintainability, and reduce duplication. By following best practices like keeping your services small, testable, and avoiding including business logic, you can create modular, reusable code that can be used across your application.
 
-With these best practices in mind, you can start using services in your Angular applications to create highly maintainable and modular code
+With these best practices in mind, you can start using services in your Angular applications to create highly maintainable and modular code.
