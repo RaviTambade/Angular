@@ -23,9 +23,9 @@ Angular comes with its own set of advantages
 
 1. <b>Custom Components</b> : Angular enables users to build their own components that can pack functionality along with rendering logic into reusable pieces. It also plays well with web components.
 
-2.<b> Data Binding</b>:Angular enables users to effortlessly move data from JavaScript code to the view, and react to user events without having to write any code manually.
+2. <b> Data Binding</b>:Angular enables users to effortlessly move data from JavaScript code to the view, and react to user events without having to write any code manually.
 
-3.<b> Dependency Injection</b>: Angular enables users to write modular services and inject them wherever they are needed. This improves the testability and reusability of the same services.
+3. <b> Dependency Injection</b>: Angular enables users to write modular services and inject them wherever they are needed. This improves the testability and reusability of the same services.
 
 4. <b>Testing</b> :Tests are first-class tools, and Angular has been built from the ground up with testability in mind. You will have the ability to test every part of your application—which is highly recommended.
 
