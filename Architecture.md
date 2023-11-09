@@ -5,7 +5,7 @@
 <img src="/images/ngarchitecture.jpg"/>
 
 1. <b>Modules</b>
-<p>An Angular app has a root module, named AppModule, which provides the bootstrap mechanism to launch the application.
+- <p>An Angular app has a root module, named AppModule, which provides the bootstrap mechanism to launch the application.
 <p>
 
 2. <b>Components</b>
