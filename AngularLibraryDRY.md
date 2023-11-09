@@ -1,6 +1,6 @@
-# Building Custom Angular Libraries
+# Angular Libraries
 
-<p>As software developers, writing code is a fundamental part of our daily routine. At Transflower, our team of developers works on our codebase every day to enhance and maintain our software. However, without proper coding practices, our codebase can become excessively large and overly complex. To avoid this, we have implemented the DRY (Don't Repeat Yourself) principle, which means we strive to avoid writing repetitive code by creating reusable code snippets.
+<p>As software developers, writing code is a fundamental part of our daily routine. At Transflower, our team of developers works on our codebase every day to enhance and maintain our software. However, without proper coding practices, our codebase can become excessively large and overly complex. To avoid this, we have implemented the <b>DRY (Don't Repeat Yourself)</b> principle, which means we strive to avoid writing repetitive code by creating reusable code snippets.
 </p>
 <p>Since we work on multiple projects, it's crucial for us to make our code adaptable and reusable. To achieve this in our Angular-based web applications, we develop Angular libraries that enable us to share code across different projects. Let us undersand the process of creating an Angular library. Let us understand how to extract shared code from our web projects and integrate it into the library.</p>
 
