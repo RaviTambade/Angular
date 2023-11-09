@@ -1,5 +1,4 @@
 ### What Is Angular?
-
     <p>From social media to healthcare, from ecommerce to online banking, billions of people worldwide use web and mobile applications for almost everything. These apps are convenient and help us with our day-to-day lives, offering seamless user experiences and interfaces. How are these apps developed to provide such reliability? Part of the credit goes to widely used frameworks like Angular, making it easy to create robust apps.</p>
 
     <p>Angular is an open-source, JavaScript framework written in TypeScript. Google maintains it, and its primary purpose is to develop single-page applications. As a framework, Angular has clear advantages while also providing a standard structure for developers to work with. It enables users to create large applications in a maintainable manner. </p>
