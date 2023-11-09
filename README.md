@@ -4,7 +4,7 @@
 - <a href="https://github.com/RaviTambade/Angular/blob/main/Introduction.md">Angular Javascript UI Framework</a>
 - <a href="https://github.com/RaviTambade/Angular/blob/main/spa.md">Single Page Application (SPA)</a>
 - <a href="https://github.com/RaviTambade/Angular/blob/main/Architecture.md">Angular Architecture</a>
-- <a href="https://github.com/RaviTambade/Angular/blob/main/Componenets.md">Angular Components</a>
+- <a href="https://github.com/RaviTambade/Angular/blob/main/ComponentArchitecture.md">Angular Components</a>
 - <a href="https://github.com/RaviTambade/Angular/blob/main/Directives.md">Angular Directives</a>
 - <a href="https://github.com/RaviTambade/Angular/blob/main/Pipes.md">Angular Pipes</a>
 - <a href="https://github.com/RaviTambade/Angular/blob/main/lifecycle.md">Angular Component LifeCycle</a>
