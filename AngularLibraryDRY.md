@@ -59,13 +59,13 @@ ng generate library membership
 
 <p>Avoid the confusion here of packing the library directory. We need to pack the built distribution folder of the library. We can add a script also in place of doing this manually.</p>
 
+```
 "pack-lib": "cd dist/membership-library && npm pack"
+```
 
 <p>This would create a .tgz package for the library which is to be exported into other applications we will be using.</p>
 
 <p>We can publish the shared library to Transflower.</p>
-
-```
 
 <p>With our package ready, we can use it inside another application to consume it and test.</p>
 
@@ -84,5 +84,3 @@ import { MembershipModule} from 'membership-library';
 ```
 
 <p>This should give our project the access to the components declared inside thsi module. We can now use the component directly on the template and see how it works!</p>
-
-
