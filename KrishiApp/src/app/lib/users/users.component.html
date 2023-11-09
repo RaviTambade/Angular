@@ -1,0 +1,8 @@
+<h2>Users :</h2>
+
+<div *ngFor="let user of users">
+<!-- <a [routerLink]="['/users/details',user.id]"> {{user.firstName}}{{user.lastName}}</a> -->
+<p (click)="onClickUser(user.id)">{{user.firstName}}{{user.lastName}}</p>
+</div>
+
+<!-- <router-outlet></router-outlet> -->

@@ -10,6 +10,12 @@
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "paths": {
+      "RoelLib": [
+        "dist/roel-lib"
+      ],
+      "RoleLib": [
+        "dist/role-lib"
+      ],
       "membership": [
         "dist/membership"
       ]
