@@ -1,5 +1,7 @@
 # Angular Architecture
-Angular is a full-fledged model-view-controller (MVC) framework. It provides clear guidance on how the application should be structured and offers bi-directional data flow while providing real DOM. 
+- Angular is a full-fledged <b>model-view-controller (MVC)</b> framework. 
+- It provides clear guidance on how the application should be structured and offers bi-directional data flow while providing real DOM. 
+
 <img src="/images/ngarchitecture.jpg"/>
 
 1. <b>Modules</b>
