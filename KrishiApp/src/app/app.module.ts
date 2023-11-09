@@ -2,7 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import{MembershipModule} from 'membership';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { RoleLibModule } from 'role-lib';
+//import{MembershipModule} from 'membership';
 
 @NgModule({
   declarations: [
@@ -10,7 +13,10 @@ import{MembershipModule} from 'membership';
   ],
   imports: [
     BrowserModule,
-    MembershipModule
+    //MembershipModule,
+    RoleLibModule,
+    HttpClientModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

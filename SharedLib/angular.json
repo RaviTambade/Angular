@@ -35,6 +35,75 @@
           }
         }
       }
+    },
+    "RoelLib": {
+      "projectType": "library",
+      "root": "projects/roel-lib",
+      "sourceRoot": "projects/roel-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/roel-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/roel-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/roel-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/roel-lib/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "RoleLib": {
+      "projectType": "library",
+      "root": "projects/role-lib",
+      "sourceRoot": "projects/role-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/role-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/role-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/role-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/role-lib/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
+  },
+  "cli": {
+    "analytics": "e9c20c6e-a6b2-427a-8b68-7fb466d9a8c6"
   }
 }

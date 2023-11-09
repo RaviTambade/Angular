@@ -1,0 +1,9 @@
+<h2>Roles :</h2>
+
+<div *ngFor="let role of roles">
+    <a [routerLink]="['/users',role.name]">{{role.name}}</a>
+</div>
+
+<router-outlet></router-outlet>
+
+
