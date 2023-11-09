@@ -4,6 +4,7 @@ Component based architectures is the new paradigm for frontend development. The 
 
 Angular's architecture is built on components. The template, data, and logic are all contained inside a Component in an Angular application. There may be one or more components in an Angular application. 
 
+<img src="/images/ComponentBasedArchitecture.png"/>
 Consider the Product Review System as an example. Product List, Product Description, and Product Rating may all be included on a single page. 
 
 Angular’s component-based architecture has revolutionized how we build dynamic and responsive web applications. A well-structured component architecture is essential for creating maintainable, scalable, and robust applications.
