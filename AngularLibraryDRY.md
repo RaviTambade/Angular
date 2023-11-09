@@ -40,9 +40,11 @@
 ## Creating a Custom Angular Library
 
 <p>At Transflower, we create our libraries using Angular CLI which comes with ng-packagr. Angular CLI provides the necessary commands to generate and manage the libraries, while ng-packagr handles the packaging and publishing of the library to npm. In Angular, we can create a workspace that contains multiple libraries. The following is a command to generate a workspace.</p>
+
 ```
 ng new tfl-commons --no-create-application
 ```
+
 <p>With the workspace set up, we can then generate a new library project using the following command:</p>
 
 ```
