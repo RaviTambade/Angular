@@ -84,3 +84,9 @@ import { MembershipModule} from 'membership-library';
 ```
 
 <p>This should give our project the access to the components declared inside thsi module. We can now use the component directly on the template and see how it works!</p>
+
+## Conclusion
+
+<p>Angular Libraries are very useful in case we want to re-use components, services, modules, etc. in our application. We just need to add the published library in our project, and that’s it, the components, modules, services, are all ready to be used in the application.</p>
+
+<p>To create a library, we generate it by “ng generate” command, built it by “ng build” command, publish by “npm publish” command. To use a library we install it by “ng i “ command.</p>
