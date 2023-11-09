@@ -5,7 +5,7 @@ Services are a way to organize and share code across your application, helping y
 
 In Angular, services are classes that are used to organize and share code across your application. They're typically used to provide functionality that can be used by multiple components, like retrieving data from an API or handling user authentication.
 
-Services are typically created using the<b> @Injectable</b>decorator, which tells Angular that this class can be used as a service. You can then inject this service into any component, directive, or other service using Angular's dependency injection system.
+Services are typically created using the<b> @Injectable</b> decorator, which tells Angular that this class can be used as a service. You can then inject this service into any component, directive, or other service using Angular's dependency injection system.
 
 One of the most important aspects of services is that they're singletons, meaning that there's only one instance of a service created, no matter how many times it's injected. This is important because it helps to reduce memory usage and ensures that all components are using the same instance of the service.
 
@@ -18,16 +18,16 @@ Services also help to reduce code duplication. For example, if you have multiple
 ## Best Practices for Using Angular Services
 When it comes to using services in Angular, there are a few best practices to keep in mind:
 
-- Don't include business logic in your services.
-    Services should be used for providing functionality, not for implementing business logic. Business logic should be implemented in components or other classes that are specific to your application domain.
-- Make sure your services are testable. 
-    Services should be designed in a way that makes them easy to test. This means avoiding using global state or other external dependencies, and instead relying on dependency injection to provide any necessary functionality.
-- Use interfaces to define your services.
-     Using interfaces to define your services can help to make your code more modular and maintainable. It also makes it easier to use other libraries and tools that rely on interfaces.
-- Keep your services small. 
-    Services should be designed to provide specific functionality, rather than attempting to handle everything at once. If a service starts to become too large, consider breaking it up into smaller, more specific services.
- - Avoid using services to handle view logic. 
-    Services should be used to provide functionality that can be shared across multiple components. They should not be used to handle view-related logic, which should be implemented in the components themselves.
+- <b>Don't include business logic in your services.</b>
+    <p>Services should be used for providing functionality, not for implementing business logic. Business logic should be implemented in components or other classes that are specific to your application domain.</p>
+- <b>Make sure your services are testable.</b> 
+    <p>Services should be designed in a way that makes them easy to test. This means avoiding using global state or other external dependencies, and instead relying on dependency injection to provide any necessary functionality.</p>
+- <b>Use interfaces to define your services.</b>
+     <p>Using interfaces to define your services can help to make your code more modular and maintainable. It also makes it easier to use other libraries and tools that rely on interfaces.</p>
+- <b>Keep your services small.</b> 
+    <p>Services should be designed to provide specific functionality, rather than attempting to handle everything at once. If a service starts to become too large, consider breaking it up into smaller, more specific services.</p>
+ - <b>Avoid using services to handle view logic.</b> 
+    <p>Services should be used to provide functionality that can be shared across multiple components. They should not be used to handle view-related logic, which should be implemented in the components themselves.</p>
 
 ## Examples of Using Angular Services
 Now that we've covered the basics of services in Angular, let's take a look at some examples of how to use them in practice.
@@ -51,7 +51,7 @@ export class ApiService {
 
 ```
 
-In this example, we've created an ApiService class that uses the HttpClient module to retrieve data from an API endpoint. We've marked this class as an injectable service using the @Injectable decorator, and we've also specified that we want this service to be provided at the root level of our application.
+In this example, we've created an ApiService class that uses the HttpClient module to retrieve data from an API endpoint. We've marked this class as an injectable service using the<b> @Injectable </b> decorator, and we've also specified that we want this service to be provided at the root level of our application.
 
 Now let's create a component that uses this service to retrieve and display the data:
 
