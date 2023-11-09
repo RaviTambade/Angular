@@ -3,13 +3,15 @@
 The Angular directive helps us to manipulate the DOM. You can change the appearance, behavior, or layout of a DOM element using the Directives. They help you to extend HTML
 
 There are three kinds of directives in Angular:
-1. Attribute directives
-2. Structural directives
+1. Component directives
+2. Attribute directives
+3. Structural directives
 
+## 1.Component Directive
+Component directive is used to specify the HTML templates. It has structure design and the working pattern of how the component should be processed, instantiated and used at runtime. It is the most commonly-used directive in any Angular project.
 
-## 1.Attribute Directives
+## 2.Attribute Directives
 Attribute directive is used when we want to change the appearance or behavior of the DOM element. This directive can be used for handling events like click, scroll, on blur etc. We can also pass values along with attribute directive.
-
 
 ### ngModel
 The ngModel directive is used the achieve the two-way data binding. We have covered ngModel directive in Data Binding in Angular Tutorial
@@ -34,7 +36,7 @@ ngStyle is used to change the multiple style properties of our HTML elements. We
 You can also build custom directives in Angular. The Process is to create a JavaScript class and apply the @Directive attribute to that class. You can write the desired behavior in the class.
 
 
-## 2.Structural Directives
+## 3.Structural Directives
 These are Angular directives that change the DOM layout by adding and removing DOM elements.
 
 ### ngFor
