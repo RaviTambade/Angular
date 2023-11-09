@@ -18,11 +18,16 @@ Services also help to reduce code duplication. For example, if you have multiple
 ## Best Practices for Using Angular Services
 When it comes to using services in Angular, there are a few best practices to keep in mind:
 
-Don't include business logic in your services. Services should be used for providing functionality, not for implementing business logic. Business logic should be implemented in components or other classes that are specific to your application domain.
-Make sure your services are testable. Services should be designed in a way that makes them easy to test. This means avoiding using global state or other external dependencies, and instead relying on dependency injection to provide any necessary functionality.
-Use interfaces to define your services. Using interfaces to define your services can help to make your code more modular and maintainable. It also makes it easier to use other libraries and tools that rely on interfaces.
-Keep your services small. Services should be designed to provide specific functionality, rather than attempting to handle everything at once. If a service starts to become too large, consider breaking it up into smaller, more specific services.
-Avoid using services to handle view logic. Services should be used to provide functionality that can be shared across multiple components. They should not be used to handle view-related logic, which should be implemented in the components themselves.
+- Don't include business logic in your services.
+    Services should be used for providing functionality, not for implementing business logic. Business logic should be implemented in components or other classes that are specific to your application domain.
+- Make sure your services are testable. 
+    Services should be designed in a way that makes them easy to test. This means avoiding using global state or other external dependencies, and instead relying on dependency injection to provide any necessary functionality.
+- Use interfaces to define your services.
+     Using interfaces to define your services can help to make your code more modular and maintainable. It also makes it easier to use other libraries and tools that rely on interfaces.
+- Keep your services small. 
+    Services should be designed to provide specific functionality, rather than attempting to handle everything at once. If a service starts to become too large, consider breaking it up into smaller, more specific services.
+ - Avoid using services to handle view logic. 
+    Services should be used to provide functionality that can be shared across multiple components. They should not be used to handle view-related logic, which should be implemented in the components themselves.
 
 ## Examples of Using Angular Services
 Now that we've covered the basics of services in Angular, let's take a look at some examples of how to use them in practice.
@@ -139,9 +144,6 @@ export class LoginComponent {
 
 In this example, we've created a LoginComponent class that uses the AuthService to handle user authentication. We've also used the ngModel directive to handle two-way data binding between the input fields and the component's properties.
 
-
 Services are an essential part of Angular development, and they can help to improve code organization, maintainability, and reduce duplication. By following best practices like keeping your services small, testable, and avoiding including business logic, you can create modular, reusable code that can be used across your application.
-
-In this article, we've covered the basics of services in Angular, why they're important, and some best practices for using them in your applications. We've also provided some examples of how to use services to handle API calls and user authentication.
 
 With these best practices in mind, you can start using services in your Angular applications to create highly maintainable and modular code
