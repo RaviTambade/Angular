@@ -1,27 +1,25 @@
 ### What Is Angular?
 
-<p>From social media to healthcare, from ecommerce to online banking, billions of people worldwide use web and mobile applications for almost everything. These apps are convenient and help us with our day-to-day lives, offering seamless user experiences and interfaces. How are these apps developed to provide such reliability? Part of the credit goes to widely used frameworks like Angular, making it easy to create robust apps.
-</p>
+    <p>From social media to healthcare, from ecommerce to online banking, billions of people worldwide use web and mobile applications for almost everything. These apps are convenient and help us with our day-to-day lives, offering seamless user experiences and interfaces. How are these apps developed to provide such reliability? Part of the credit goes to widely used frameworks like Angular, making it easy to create robust apps.</p>
 
-<p>Angular is an open-source, JavaScript framework written in TypeScript. Google maintains it, and its primary purpose is to develop single-page applications. As a framework, Angular has clear advantages while also providing a standard structure for developers to work with. It enables users to create large applications in a maintainable manner. <p>
+    <p>Angular is an open-source, JavaScript framework written in TypeScript. Google maintains it, and its primary purpose is to develop single-page applications. As a framework, Angular has clear advantages while also providing a standard structure for developers to work with. It enables users to create large applications in a maintainable manner. </p>
 
 ## Why Do You Need a Framework?
-<[>Frameworks in general boost web development efficiency and performance by providing a consistent structure so that developers don’t have to keep rebuilding code from scratch. Frameworks are time savers that offer developers a host of extra features that can be added to software without requiring extra effort.</p>
+    <p>Frameworks in general boost web development efficiency and performance by providing a consistent structure so that developers don’t have to keep rebuilding code from scratch. Frameworks are time savers that offer developers a host of extra features that can be added to software without requiring extra effort.</p>
 
-<p>JavaScript is the most commonly used client-side scripting language. It is written into HTML documents to enable interactions with web pages in many unique ways. As a relatively easy-to-learn language with pervasive support, it is well-suited to develop modern applications. </p>
+    <p>JavaScript is the most commonly used client-side scripting language. It is written into HTML documents to enable interactions with web pages in many unique ways. As a relatively easy-to-learn language with pervasive support, it is well-suited to develop modern applications.</p>
 
-<p>But is JavaScript ideal for developing single-page applications that require modularity, testability, and developer productivity? Perhaps not. </p>
+    <p>But is JavaScript ideal for developing single-page applications that require modularity, testability, and developer productivity? Perhaps not. </p>
 
-<p>These days, we have a variety of frameworks and libraries designed to provide alternative solutions. With respect to front-end web development, Angular addresses many, if not all, of the issues developers face when using JavaScript on its own.</p>
+    <p>These days, we have a variety of frameworks and libraries designed to provide alternative solutions. With respect to front-end web development, Angular addresses many, if not all, of the issues developers face when using JavaScript on its own.</p>
 
 
 ### What are the Different Angular Versions: 
+    <p>“Angular” is the catch-all term for the various framework versions out there. Angular was developed in 2009, and as a result, there have been many iterations.</p>
 
-<p>“Angular” is the catch-all term for the various framework versions out there. Angular was developed in 2009, and as a result, there have been many iterations.</p>
+    <p>First, there was the original Angular, called Angular 1 and eventually known as AngularJS. Then came Angulars 2, 3, 4, 5, until finally, the current version, Angular 15, released on 11/11/2022. Each subsequent Angular version improves on its predecessor, fixing bugs, addressing issues, and accommodating increasing complexity of current platforms.</p>
 
-<p>First, there was the original Angular, called Angular 1 and eventually known as AngularJS. Then came Angulars 2, 3, 4, 5, until finally, the current version, Angular 15, released on 11/11/2022. Each subsequent Angular version improves on its predecessor, fixing bugs, addressing issues, and accommodating increasing complexity of current platforms.</p>
-
-<p>If you want to design apps better suited for mobile devices, and/or more complex apps, you had best to upgrade to its current version.</p>
+    <p>If you want to design apps better suited for mobile devices, and/or more complex apps, you had best to upgrade to its current version.</p>
 
 ## Features of Angular
 
@@ -32,11 +30,10 @@
 2. <b>TypeScript </b>
     <p>TypeScript defines a set of types to JavaScript, which helps users write JavaScript code that is easier to understand. All of the TypeScript code compiles with JavaScript and can run smoothly on any platform. TypeScript is not compulsory for developing an Angular application. However, it is highly recommended as it offers better syntactic structure—while making the codebase easier to understand and maintain. </p>
 
-You can install TypeScript as an NPM package with the following command:
-
-```
-npm install -g typescript
-```
+    You can install TypeScript as an NPM package with the following command:
+    ```
+    npm install -g typescript
+    ```
 
 3. <b>Data Binding</b>
     <p>Data binding is a process that enables users to manipulate web page elements through a web browser. It employs dynamic HTML and does not require complex scripting or programming. Data binding is used in web pages that include interactive components, such as calculators, tutorials, forums, and games. It also enables a better incremental display of a web page when pages contain a large amount of data. </p>
