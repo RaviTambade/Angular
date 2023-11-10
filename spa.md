@@ -1,6 +1,7 @@
 
-Web Application  Architectures :
+# Web Application  Architectures
 
+<img src="/images/spa_mpa.png"/>
 There are two main architecture options for building web applications: 
 1. <b>single page applications (SPAs)</b>
     <p>SPA work within a single browser session and allow users to jump between parts of the system without requiring the entire page to reload.</p> 
@@ -8,7 +9,7 @@ There are two main architecture options for building web applications:
     <p>MPA require a new page to be loaded every time the user interacts with the application. It's important to note that SPAs are typically faster and provide a more seamless user experience, while MPAs may be more suitable for certain types of content, such as blogs or news websites.</p>
 
 
-# Single Page Application (SPA)
+## Single Page Application (SPA)
 
 SPAs started to become popular around the mid 2010’s with the arrival of frameworks like React, Angular and Vue. 
 
@@ -22,43 +23,41 @@ One of the best advantages of a correctly-configured SPA is the user experience 
 
 - <b>The main advantage of single-page applications is their speed.</b> Most resources SPA needs (HTML + CSS + Scripts) are loaded at the launch of the app and don’t need to be reloaded during usage. The only thing that changes is the data that is transmitted to and from the server. As a result, the application is very responsive to the user’s queries and doesn’t have to wait for client-server communication all the time.
 
-<b>"one second of load lag time would cost Amazon $1.6 billion sales per year."- Amazon </b>
+"one second of load lag time would cost Amazon $1.6 billion sales per year."- Amazon
 
-<b>"When load time jumps from 1 second to 4 seconds, conversions decline sharply. For every one second improvement, we experience a 2% conversion increase." - Walmart</b>
+"When load time jumps from 1 second to 4 seconds, conversions decline sharply. For every one second improvement, we experience a 2% conversion increase." - Walmart
 
-<b>"A lag time of 400 ms results in a decrease of 0.44% traffic- In real terms this amounts to 440 million abandoned sessions/month and a massive loss in advertising revenue for Google." - Google</b>
+"A lag time of 400 ms results in a decrease of 0.44% traffic- In real terms this amounts to 440 million abandoned sessions/month and a massive loss in advertising revenue for Google." - Google
 
-<b>"An extra 0.5 seconds in each search page generation would cause traffic to drop by 20%." -Google</b>
+"An extra 0.5 seconds in each search page generation would cause traffic to drop by 20%." -Google
 
 -<b> Single-page applications are excellent when you have a team of developers working together.</b>It allows backend developers to focus on the API, while frontend developers can pay more attention to creating the best user experience based on the backend API and implementing a beautiful user interface. 
 
-- <b>Debugging a single-page application</b> is also easy using the Chrome browser since it has special tools for Angular Batarang and React (the technologies used for SPAs.) Using a console, you can monitor network operations as well as investigate various page elements and associated data. 
-- <b>Caching process is also quite efficient</b> – the application sends only one request, stores all data transmitted, and can use this data. This is especially important at times when the user can have poor connectivity – s/he can still use your app since it’s synchronized with the server when the connection improves.
+- <b>Debugging a single-page application</b>
+<p>Debugging is also easy using the Chrome browser since it has special tools for Angular Batarang and React (the technologies used for SPAs.) Using a console, you can monitor network operations as well as investigate various page elements and associated data</p>. 
+- <b>Caching process is also quite efficient</b> – 
+<p>the application sends only one request, stores all data transmitted, and can use this data. This is especially important at times when the user can have poor connectivity – s/he can still use your app since it’s synchronized with the server when the connection improves.</p>
+
 
 # Advantages of Single Page Application
 
 - <b>Single-page applications put a more significant load on the browser.</b> For example, if your users have low-power devices, they will have a poor app experience in terms of speed.
 - Since the app can run for a long time – hours at a time, you need to make sure your SPA doesn’t consume more memory than it needs. Otherwise, <b>the pleasure of fast-loading pages will be destroyed by the sluggishness of unavailable memory on the user’s device</b>.
 - One more disadvantage of JavaScript is that <b>users simply can have it disabled on their devices</b>, and then you need to think of additional ways how they can access the information on your website or your app without JavaScript.
-- <b>Security leaks</b> are a potential disadvantage of Single Page Applications (SPAs) due to the heavy reliance on JavaScript. Because most application logic is executed on the client side, it can be more vulnerable to certain types of attacks like cross-site scripting (XSS) or cross-site request forgery (CSRF) attacks.
-
-XSS attacks occur when an attacker injects malicious code into the SPA, which is then executed on the user's browser. This can lead to the theft of sensitive information like user credentials or session tokens. To prevent XSS attacks, it's important to properly validate and sanitize user input, as well as implement other security measures like Content Security Policy (CSP) and Cross-Site Request Forgery (CSRF) protection.>. 
+- <b>Security leaks</b> are a potential disadvantage of Single Page Applications (SPAs) due to the heavy reliance on JavaScript. Because most application logic is executed on the client side, it can be more vulnerable to certain types of attacks like cross-site scripting (XSS) or cross-site request forgery (CSRF) attacks. XSS attacks occur when an attacker injects malicious code into the SPA, which is then executed on the user's browser. This can lead to the theft of sensitive information like user credentials or session tokens. To prevent XSS attacks, it's important to properly validate and sanitize user input, as well as implement other security measures like Content Security Policy (CSP) and Cross-Site Request Forgery (CSRF) protection.>. 
 - Another security issue is <b>the privacy of sensitive data</b>. The initial page load should not contain any information that shouldn’t be available to all users. Since the entire SPA loads right away to the user’s device, you might accidentally give away data that should be behind a login or not available at all. 
 - SEO optimization is tricky when you have a single-page application
 
 ## Benefits of SPA
 
 ### For users
-The main advantage of single-page applications for end-users is, of course, the speed at which the app loads as well as the ability to work offline.
-
-SPA offers a linear user experience, which means that it is easy to navigate the website and understand where to find this or that thing. For example, the Saucony SPA has a clear beginning, middle, and end. Using UI/UX design, the Saucony app developers have used parallax scrolling and transitions to make the customer journey a pleasurable one. 
-
-Single-page applications are great on mobile devices too, since most of the time, all the users need is to scroll (think of the endless Facebook wall). You don’t have to click any links, and you just enjoy scrolling. 
+- The main advantage of single-page applications for end-users is, of course, the speed at which the app loads as well as the ability to work offline.
+- SPA offers a linear user experience, which means that it is easy to navigate the website and understand where to find this or that thing. For example, the Saucony SPA has a clear beginning, middle, and end. Using UI/UX design, the Saucony app developers have used parallax scrolling and transitions to make the customer journey a pleasurable one. 
+- Single-page applications are great on mobile devices too, since most of the time, all the users need is to scroll (think of the endless Facebook wall). You don’t have to click any links, and you just enjoy scrolling. 
 
 ### For Businesses
-When it comes to businesses, single-page application development usually takes less time since the same backend API can be used for both the web and mobile. As a result, the information flow is streamlined, and it becomes much easier to create a standalone native mobile application. 
-
-Considering the advantages in speed optimization of the SPA, businesses can also benefit because the users would be more interested in using an app that is fast (ergo, purchase something or just use the app more often.)
+- When it comes to businesses, single-page application development usually takes less time since the same backend API can be used for both the web and mobile. As a result, the information flow is streamlined, and it becomes much easier to create a standalone native mobile application. 
+- Considering the advantages in speed optimization of the SPA, businesses can also benefit because the users would be more interested in using an app that is fast (ergo, purchase something or just use the app more often.)
 
 ## Single Page Application Architecture
 
