@@ -1,6 +1,6 @@
 ## Component based architecture
 
-Component based architectures is the new paradigm for frontend development. The idea is to build autonomous pieces with clearly defined responsibilities and which might even be reusable across multiple applications. Components are 1st class citizens in Angular. 
+Component based architecture is the new paradigm for frontend development. The idea is to build autonomous pieces with clearly defined responsibilities and which might even be reusable across multiple applications. Components are 1st class citizens in Angular. 
 
 Angular's architecture is built on components. The template, data, and logic are all contained inside a Component in an Angular application. There may be one or more components in an Angular application. 
 
