@@ -17,20 +17,20 @@ One of the best advantages of a correctly-configured SPA is the user experience 
 ### Advantages of Single Page Application
 
 - <b>The main advantage of single-page applications is their speed.</b>
-<p> Most resources SPA needs (HTML + CSS + Scripts) are loaded at the launch of the app and don’t need to be reloaded during usage. The only thing that changes is the data that is transmitted to and from the server. As a result, the application is very responsive to the user’s queries and doesn’t have to wait for client-server communication all the time.
-<p>
+ Most resources SPA needs (HTML + CSS + Scripts) are loaded at the launch of the app and don’t need to be reloaded during usage. The only thing that changes is the data that is transmitted to and from the server. As a result, the application is very responsive to the user’s queries and doesn’t have to wait for client-server communication all the time.
+
     - "one second of load lag time would cost Amazon $1.6 billion sales per year."- Amazon
     - "When load time jumps from 1 second to 4 seconds, conversions decline sharply. For every one second improvement, we experience a 2% conversion increase." - Walmart
     - "A lag time of 400 ms results in a decrease of 0.44% traffic- In real terms this amounts to 440 million abandoned sessions/month and a massive loss in advertising revenue for Google." - Google
     - "An extra 0.5 seconds in each search page generation would cause traffic to drop by 20%." -Google
 
 - <b>Single-page applications are excellent when you have a team of developers working together.</b>
-<p>It allows backend developers to focus on the API, while frontend developers can pay more attention to creating the best user experience based on the backend API and implementing a beautiful user interface. </p>
+It allows backend developers to focus on the API, while frontend developers can pay more attention to creating the best user experience based on the backend API and implementing a beautiful user interface.
 
 - <b>Debugging a single-page application</b>
-<p>Debugging is also easy using the Chrome browser since it has special tools for Angular Batarang and React (the technologies used for SPAs.) Using a console, you can monitor network operations as well as investigate various page elements and associated data</p>. 
+>Debugging is also easy using the Chrome browser since it has special tools for Angular Batarang and React (the technologies used for SPAs.) Using a console, you can monitor network operations as well as investigate various page elements and associated data. 
 - <b>Caching process is also quite efficient</b> – 
-<p>the application sends only one request, stores all data transmitted, and can use this data. This is especially important at times when the user can have poor connectivity – s/he can still use your app since it’s synchronized with the server when the connection improves.</p>
+the application sends only one request, stores all data transmitted, and can use this data. This is especially important at times when the user can have poor connectivity – s/he can still use your app since it’s synchronized with the server when the connection improves.
 
 
 ### Advantages of Single Page Application
