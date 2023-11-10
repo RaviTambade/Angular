@@ -28,9 +28,9 @@ One of the best advantages of a correctly-configured SPA is the user experience 
 It allows backend developers to focus on the API, while frontend developers can pay more attention to creating the best user experience based on the backend API and implementing a beautiful user interface.
 
 - <b>Debugging a single-page application</b>
->Debugging is also easy using the Chrome browser since it has special tools for Angular Batarang and React (the technologies used for SPAs.) Using a console, you can monitor network operations as well as investigate various page elements and associated data. 
+Debugging is also easy using the Chrome browser since it has special tools for Angular Batarang and React (the technologies used for SPAs.) Using a console, you can monitor network operations as well as investigate various page elements and associated data. 
 - <b>Caching process is also quite efficient</b> – 
-the application sends only one request, stores all data transmitted, and can use this data. This is especially important at times when the user can have poor connectivity – s/he can still use your app since it’s synchronized with the server when the connection improves.
+The application sends only one request, stores all data transmitted, and can use this data. This is especially important at times when the user can have poor connectivity – s/he can still use your app since it’s synchronized with the server when the connection improves.
 
 
 ### Advantages of Single Page Application
