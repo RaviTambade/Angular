@@ -2,11 +2,6 @@
 # Web Application  Architectures
 
 <img src="/images/spa_mpa.png"/>
-There are two main architecture options for building web applications: 
-1. <b>single page applications (SPAs)</b>
-    <p>SPA work within a single browser session and allow users to jump between parts of the system without requiring the entire page to reload.</p> 
-2. <b>Multi-page applications(MPA)</b>
-    <p>MPA require a new page to be loaded every time the user interacts with the application. It's important to note that SPAs are typically faster and provide a more seamless user experience, while MPAs may be more suitable for certain types of content, such as blogs or news websites.</p>
 
 
 ## Single Page Application (SPA)
@@ -19,7 +14,7 @@ Think of how Facebook, Twitter and Instagram allow users to continually scroll t
 
 One of the best advantages of a correctly-configured SPA is the user experience (UX).End user enjoys the natural environment of the app without having to wait for the page reloads and other things. You remain on the same page, which is powered by JavaScript programming language. 
 
-# Advantages of Single Page Application
+### Advantages of Single Page Application
 
 - <b>The main advantage of single-page applications is their speed.</b> Most resources SPA needs (HTML + CSS + Scripts) are loaded at the launch of the app and don’t need to be reloaded during usage. The only thing that changes is the data that is transmitted to and from the server. As a result, the application is very responsive to the user’s queries and doesn’t have to wait for client-server communication all the time.
 
@@ -39,7 +34,7 @@ One of the best advantages of a correctly-configured SPA is the user experience 
 <p>the application sends only one request, stores all data transmitted, and can use this data. This is especially important at times when the user can have poor connectivity – s/he can still use your app since it’s synchronized with the server when the connection improves.</p>
 
 
-# Advantages of Single Page Application
+### Advantages of Single Page Application
 
 - <b>Single-page applications put a more significant load on the browser.</b> For example, if your users have low-power devices, they will have a poor app experience in terms of speed.
 - Since the app can run for a long time – hours at a time, you need to make sure your SPA doesn’t consume more memory than it needs. Otherwise, <b>the pleasure of fast-loading pages will be destroyed by the sluggishness of unavailable memory on the user’s device</b>.
@@ -48,54 +43,25 @@ One of the best advantages of a correctly-configured SPA is the user experience 
 - Another security issue is <b>the privacy of sensitive data</b>. The initial page load should not contain any information that shouldn’t be available to all users. Since the entire SPA loads right away to the user’s device, you might accidentally give away data that should be behind a login or not available at all. 
 - SEO optimization is tricky when you have a single-page application
 
-## Benefits of SPA
+### Benefits of SPA
 
-### For users
+#### For users
 - The main advantage of single-page applications for end-users is, of course, the speed at which the app loads as well as the ability to work offline.
 - SPA offers a linear user experience, which means that it is easy to navigate the website and understand where to find this or that thing. For example, the Saucony SPA has a clear beginning, middle, and end. Using UI/UX design, the Saucony app developers have used parallax scrolling and transitions to make the customer journey a pleasurable one. 
 - Single-page applications are great on mobile devices too, since most of the time, all the users need is to scroll (think of the endless Facebook wall). You don’t have to click any links, and you just enjoy scrolling. 
 
-### For Businesses
+#### For Businesses
 - When it comes to businesses, single-page application development usually takes less time since the same backend API can be used for both the web and mobile. As a result, the information flow is streamlined, and it becomes much easier to create a standalone native mobile application. 
 - Considering the advantages in speed optimization of the SPA, businesses can also benefit because the users would be more interested in using an app that is fast (ergo, purchase something or just use the app more often.)
 
-## Single Page Application Architecture
-
-SPA consists of the client-side technologies (  HTML, jQuery, Ajax,React.js,Angular, Vue.js) and the server-side technologies (Node.js, Java, .NET, PHP, Ruby on Rails, etc)
-
-<img src="/images/rendering.png"/>
-
-1. <b>Client Side Rendering (CSR)</b>
-    1. The browser sends a request for an HTML file from the server
-    2. The server responds quickly with a simple HTML file with styles and scripts linked
-    3. The user sees an empty page or some loader image while the js is executing
-    4. The application fetches data, generates views, and injects it into DOM
-    5. The application is ready for use
-
-
-2. <b>Server Side Rendering (SSR)</b>
-    1. The browser sends a request for an HTML file from the server
-    2. The server fetches all needed data, renders the application, and generates the app’s HTML file on the fly
-    3. The user sees the available content
-    4. The single-page application framework is what attaches events, generates a virtual DOM, and performs other actions
-    5. The application is ready for use
-
-3. <b>Static Side Generators (SSG)</b>
-    1. The browser sends a request for an HTML file from the server
-    2. The server responds quickly with an already-prepared HTML file
-    3. The user sees the page
-    4. The application fetches data, generates views, and injects it into DOM
-    5. The application is ready for use
-
-
-## Javascript UI Framwork for SPA
+### Javascript UI Framwork for SPA
 - <b>Angular </b>: A powerful JavaScript framework developed by Google. It provides a complete solution for building complex SPAs and offers features like two-way data binding, dependency injection, and modular architecture.
 - <b>Vue</b>: A progressive JavaScript framework that is known for its simplicity and ease of integration. It allows developers to gradually adopt its features and scale up as needed.
 - <b>React</b>: A popular JavaScript library developed by Facebook. It focuses on building reusable UI components and provides efficient rendering through the use of a virtual DOM.
 - <b>Ember.js</b>: A framework that follows the convention-over-configuration principle. It provides a robust and opinionated structure for building ambitious SPAs.
 - <b>Backbone.js</b>: A lightweight JavaScript library that provides a minimalistic structure for organizing code and handling data models.
 
-## Additional  technologies for SPAs
+### Additional  technologies for SPAs
 - <b>AJAX</b>: Asynchronous JavaScript and XML (AJAX) allow SPAs to retrieve data from a server without reloading the entire page. It enables seamless data exchange between the client and server, improving user experience.
 - <b>JSON</b>: JavaScript Object Notation (JSON) is a lightweight data-interchange format commonly used to transmit data between the server and client in SPAs.
 - <b>RESTful APIs</b>: Representational State Transfer (REST) is an architectural style used to design networked applications. RESTful APIs provide a standardized way to interact with server-side resources and are often used in SPAs for data retrieval and manipulation.
@@ -149,5 +115,5 @@ SPA consists of the client-side technologies (  HTML, jQuery, Ajax,React.js,Angu
 - <b>Time to market</b>
 <p>SPAs are easier and faster to build and as such, enable businesses to launch their products faster. MPAs tend to take a lot of time and even cost more since they involve building multiple pages. However, SPAs rely heavily on advanced JavaScript frameworks and tools, so you might have a problem finding the right talent to build your SPA.</p>
 
-## conclustion:
+## Conclusion:
 <p>Ultimately, the choice between a SPA and an MPA should be based on the specific needs and requirements of your application. If your application requires a high degree of interactivity and real-time updates, then a SPA may be the better choice despite the added complexity. However, if your application is relatively simple and does not require a lot of client-side processing, then an MPA may be the simpler and more practical choice.</p>
