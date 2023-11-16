@@ -5,10 +5,12 @@ import { SellingflowersPipe } from "./sellingflowerpipe";
 import { HiddenDirective } from "./customdirectivehidden";
 import { IfDirective } from "./customdirectiveif";
 import { UnderlineDirective } from "./customdirectiveunderline";
+import { ReasonablePipe } from "./sellingflowerpipe";
  
 @NgModule({
     declarations: [ 
                     SellingflowersPipe,
+                    ReasonablePipe,
                     HiddenDirective,
                     IfDirective,
                     UnderlineDirective
@@ -16,7 +18,8 @@ import { UnderlineDirective } from "./customdirectiveunderline";
     exports: [      SellingflowersPipe,
                     HiddenDirective,
                     IfDirective,
-                    UnderlineDirective   
+                    UnderlineDirective,
+                    ReasonablePipe 
              ],
     imports:[ BrowserModule],
 

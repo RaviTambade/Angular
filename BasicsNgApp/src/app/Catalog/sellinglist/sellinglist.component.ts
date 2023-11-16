@@ -11,12 +11,14 @@ flowers:any;
 
   ngOnInit() {
 
-    this.flowers = [{title:'gerbera',description:"wedding Flower",unitPrice:10, quantity:2300,likes:5000,imageUrl:"./assets/images/gerbera.jpg",canSell:"true"},
-    {title:'rose',description:"valentine Flower",unitPrice:6, quantity:9300,likes:4000,imageUrl:"./assets/images/gerbera.jpg",canSell:"true"},
-    {title:'jasmine',description:"smelin Flower",unitPrice:12, quantity:900,likes:4560,imageUrl:"./assets/images/gerbera.jpg",canSell:"true"},
-    {title:'lotus',description:"wedding Flower",unitPrice:10, quantity:2300,likes:654,imageUrl:"./assets/images/gerbera.jpg",canSell:"true"},
-    {title:'marigold',description:"wedding Flower",unitPrice:10, quantity:2300,likes:45534,imageUrl:"./assets/images/gerbera.jpg",canSell:"true"},
-    {title:'Lily',description:"wedding Flower",unitPrice:10, quantity:2300,likes:76,imageUrl:"./assets/images/gerbera.jpg",canSell:"true"}    ]
+    this.flowers = 
+    [
+      {title:'gerbera',description:"wedding Flower",unitPrice:10, quantity:2300,likes:5000,imageUrl:"./assets/images/gerbera.jpg",canSell:true},
+      {title:'rose',description:"valentine Flower",unitPrice:49, quantity:9300,likes:4000,imageUrl:"./assets/images/gerbera.jpg",canSell:true},
+      {title:'jasmine',description:"smelin Flower",unitPrice:18, quantity:900,likes:4560,imageUrl:"./assets/images/gerbera.jpg",canSell:true},
+      {title:'lotus',description:"wedding Flower",unitPrice:45, quantity:2300,likes:654,imageUrl:"./assets/images/gerbera.jpg",canSell:true},
+      {title:'marigold',description:"wedding Flower",unitPrice:10, quantity:2300,likes:45534,imageUrl:"./assets/images/gerbera.jpg",canSell:true},
+      {title:'Lily',description:"wedding Flower",unitPrice:60, quantity:2300,likes:76,imageUrl:"./assets/images/gerbera.jpg",canSell:false}    ]
 
   }
 

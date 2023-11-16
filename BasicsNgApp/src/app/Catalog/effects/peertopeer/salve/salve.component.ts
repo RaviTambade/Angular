@@ -8,8 +8,10 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./salve.component.css']
 })
 export class SalveComponent implements OnInit {
+
   subscriptionIncrement: Subscription|undefined;
   count:Number=0;
+  
   constructor(private svc:NotificationService){
   }
 

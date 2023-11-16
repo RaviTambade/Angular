@@ -2,7 +2,6 @@ import { Directive, ElementRef, Input, Renderer2 } from '@angular/core';
 //Custom attribute directive/ element directive
 
 
-
 //step 1: Write custom class 
 //step 2: decorate using @Directive  decorator
 //step 3: inject ElementRef and Renderer in constructor
