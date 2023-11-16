@@ -1,5 +1,7 @@
 
-# Angualr Pipes
+# Angular Pipes
+
+<img src="/images/pipe.webp"/>
 
 Pipes are simply a function that we can directly apply on any expression/value in a template to transform it into some other value.
 
