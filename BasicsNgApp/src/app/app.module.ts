@@ -13,6 +13,7 @@ import { TemplateFormsModule } from './forms/templateforms.module';
 import { ReusableModule } from './reusable/reusable.module';
 import { ObservableModule } from './observables/observable.module';
 import { SPAModule } from './spa/spa.module';
+import { Customodule } from './custom/customodule';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { SPAModule } from './spa/spa.module';
     TemplateFormsModule,
     ReusableModule,
     ObservableModule,
-    SPAModule
+    SPAModule,
+    Customodule
    
   ],
   
