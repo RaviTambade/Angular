@@ -20,7 +20,7 @@ The ngModel directive is used the achieve the two-way data binding. We have cove
 The ngClass is used to add or remove the CSS classes from an HTML element. Using the ngClass one can create dynamic styles in HTML pages
 
 
-```
+```typescript
 <div [ngClass]="'first second'">...</div>
 ```
 
@@ -28,7 +28,7 @@ The ngClass is used to add or remove the CSS classes from an HTML element. Using
 ### ngStyle
 ngStyle is used to change the multiple style properties of our HTML elements. We can also bind these properties to values that can be updated by the user or our components.
 
-```
+```typescript
 <div [ngStyle]="{'color': 'blue', 'font-size': '24px', 'font-weight': 'bold'}">
     some text
 </div>
@@ -43,7 +43,7 @@ These are Angular directives that change the DOM layout by adding and removing D
 
 The ngFor is an Angular structural directive, which repeats a portion of the HTML template once per each item from an iterable list (Collection).
 
-```
+```typescript
 <tr *ngFor="let customer of customers;">
     <td>{{customer.customerNo}}</td>
     <td>{{customer.name}}</td>
@@ -55,7 +55,7 @@ The ngFor is an Angular structural directive, which repeats a portion of the HTM
 ### ngSwitch
 The ngSwitch directive lets you add/remove HTML elements depending on a match expression. ngSwitch directive used along with ngSwitchCase and ngSwitchDefault
 
-```
+```typescript
 <div [ngSwitch]="Switch_Expression"> 
     <div *ngSwitchCase="MatchExpression1”> First Template</div>
     <div *ngSwitchCase="MatchExpression2">Second template</div> 
@@ -68,7 +68,7 @@ The ngSwitch directive lets you add/remove HTML elements depending on a match ex
 ### ngIf
 The ngIf Directives is used to add or remove HTML elements based on an expression. The expression must return a boolean value. If the expression is false then the element is removed, else the element is inserted.
 
-```
+```typescript
 <div *ngIf="condition"> 
     This is shown if condition is true
 </div>
@@ -76,20 +76,57 @@ The ngIf Directives is used to add or remove HTML elements based on an expressio
 
 Angular Directives are used to design reusable components and can be used across angular applications. The various different directives can be used in a DOM as per the requirement. Directives don’t have a View or a template associated with it instead they capture events and perform required action. Another limitation with Angular Directives is that you cannot use pipes with an angular directive.
 
-```
-import {Directive} from '@angular/core';
-@Directive({
-selector: "[buttonClick]",
-hostListeners: {
-'click': 'onClick()',
-},
-})
-class buttonClick {
-constructor() {}
-onClick() {
-console.log(‘---- Button Event Has Been   Clicked ----');  }
+### Custom Structural Directive -
+The MyIf Directive is used to add or remove elements from DOM based on expression that must return boolean.
+```typescript
+import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
+
+@Directive({ selector: '[myIf]' })
+export class IfDirective {
+  constructor(
+    private templateRef: TemplateRef<any>,
+    private viewContainer: ViewContainerRef
+    ) { }
+
+  @Input() set myIf(shouldAdd: boolean) {
+    if (shouldAdd) {
+      // If condition is true add template to DOM
+      this.viewContainer.createEmbeddedView(this.templateRef);
+    } else {
+     // Else remove template from DOM
+      this.viewContainer.clear();
+    }
+  }
 }
-<button buttonClick>Testing Button Click</button>
+```
+
+### Custom Attribute Directive
+
+The `tflUnderline` directive  adds underline to html element on mouseenter and removes on mouseleave
+```typescript
+import { Directive, HostListener, ElementRef, Renderer2 } from '@angular/core';
+
+@Directive({
+    selector: '[tflUnderline]'
+})
+export class UnderlineDirective {
+    constructor(private el: ElementRef,private renderer: Renderer2){}
+    
+    @HostListener('mouseenter') onMouseEnter() { this.hover(true); }
+    @HostListener('mouseleave') onMouseLeave() { this.hover(false); }
+
+    hover(shouldUnderline: boolean){
+        console.log("hover effect");
+        console.log("should underline :" +shouldUnderline);
+        if(shouldUnderline){  
+        
+        this.renderer.setStyle(this.el.nativeElement, 'text-decoration', 'underline');
+        } else {         
+        this.renderer.setStyle(this.el.nativeElement, 'text-decoration', 'none');
+        }
+    }
+}
+
 ```
 
 
