@@ -1,14 +1,11 @@
-import { Component, OnInit,
-        Input, Output,EventEmitter } from '@angular/core';
- 
+import { Component, EventEmitter, Input, Output, } from '@angular/core';
 
 @Component({
-  selector: 'app-counter',
-  templateUrl: './counter.component.html',
-  styleUrls: ['./counter.component.css']
+  selector: 'bubble-child',
+  templateUrl: './child.component.html',
+  styleUrls: ['./child.component.css']
 })
-export class CounterComponent implements OnInit {
-  
+export class BubbleChildComponent {
   @Input() count:number=0;
   @Output() update=new EventEmitter();
 
@@ -28,3 +25,4 @@ export class CounterComponent implements OnInit {
       this.update.emit({count:this.count});
     }
 }
+

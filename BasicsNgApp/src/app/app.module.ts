@@ -14,11 +14,15 @@ import { ReusableModule } from './reusable/reusable.module';
 import { ObservableModule } from './observables/observable.module';
 import { SPAModule } from './spa/spa.module';
 import { Customodule } from './custom/customodule';
-
+import { MasterComponent } from './Catalog/effects/peertopeer/master/master.component';
+import { SalveComponent } from './Catalog/effects/peertopeer/salve/salve.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MasterComponent,
+    SalveComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,13 @@ import { ListService } from '../listservice';
 import { CounterComponent } from '../counter/counter.component';
 import {SellinglistComponent} from "../sellinglist/sellinglist.component";
 import { Customodule } from '../../custom/customodule';
+import {  TunnelParentComponent } from '../effects/tunnel/parent/parent.component';
+import {  TunnelChildComponent } from '../effects/tunnel/child/child.component';
+
+import { BubbleChildComponent } from '../effects/bubble/child/child.component';
+import { BubbleParentComponent } from '../effects/bubble/parent/parent.component';
+
+ 
 
 
 //Decorator: meta data , extra information for framework to understand
@@ -20,10 +27,14 @@ import { Customodule } from '../../custom/customodule';
   ],
   declarations: [DetailComponent,ListComponent,
                  UpdateComponent,DeleteComponent,
-                 CounterComponent,SellinglistComponent
+                 CounterComponent,SellinglistComponent,
+                 TunnelParentComponent,TunnelChildComponent,
+                 BubbleChildComponent, BubbleParentComponent
   ], // declare component, pipes, directives
   exports:[DetailComponent,ListComponent,
-           UpdateComponent,DeleteComponent,SellinglistComponent],  //publish component, pipes, directives
+           UpdateComponent,DeleteComponent,SellinglistComponent,
+           TunnelParentComponent,TunnelChildComponent,
+          BubbleChildComponent, BubbleParentComponent],  //publish component, pipes, directives
  
          // publish services
   providers:[ListService]  
