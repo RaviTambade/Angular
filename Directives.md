@@ -76,8 +76,8 @@ The ngIf Directives is used to add or remove HTML elements based on an expressio
 
 Angular Directives are used to design reusable components and can be used across angular applications. The various different directives can be used in a DOM as per the requirement. Directives don’t have a View or a template associated with it instead they capture events and perform required action. Another limitation with Angular Directives is that you cannot use pipes with an angular directive.
 
-### Custom Structural Directive -
-The MyIf Directive is used to add or remove elements from DOM based on expression that must return boolean.
+### Custom Structural Directive 
+The `MyIf` Directive is used to add or remove elements from DOM based on expression that must return boolean.
 ```typescript
 import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 
