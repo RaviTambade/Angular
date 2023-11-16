@@ -116,12 +116,10 @@ export class UnderlineDirective {
     @HostListener('mouseleave') onMouseLeave() { this.hover(false); }
 
     hover(shouldUnderline: boolean){
-        console.log("hover effect");
-        console.log("should underline :" +shouldUnderline);
         if(shouldUnderline){  
-        
         this.renderer.setStyle(this.el.nativeElement, 'text-decoration', 'underline');
-        } else {         
+        }
+        else {         
         this.renderer.setStyle(this.el.nativeElement, 'text-decoration', 'none');
         }
     }
