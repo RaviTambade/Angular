@@ -16,12 +16,12 @@ export class MasterComponent {
 
   increment() { 
     this.count++;
-    this.svc.increment(this.count);
+    this.svc.sendCount(this.count);
    }
  
    decrement(){
     this.count--;
-    this.svc.increment(this.count);
+    this.svc.sendCount(this.count);
   
    }
 }

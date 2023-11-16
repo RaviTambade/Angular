@@ -10,11 +10,7 @@ export class NotificationService {
 
   constructor() { }
 
-  increment(count:Number){
-    this.subject.next({ amount: count });
-  }
-
-  decrement(count:Number){
+  sendCount(count:Number){
     this.subject.next({ amount: count });
   }
 
