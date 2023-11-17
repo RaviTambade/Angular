@@ -16,12 +16,14 @@ import { SPAModule } from './spa/spa.module';
 import { Customodule } from './custom/customodule';
 import { MasterComponent } from './Catalog/effects/peertopeer/master/master.component';
 import { SalveComponent } from './Catalog/effects/peertopeer/salve/salve.component';
+import { FlowersComponent } from './custom/flowers/flowers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MasterComponent,
     SalveComponent,
+    FlowersComponent,
 
   ],
   imports: [

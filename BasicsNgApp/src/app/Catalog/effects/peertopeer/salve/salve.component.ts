@@ -7,20 +7,10 @@ import { Subscription } from 'rxjs';
   templateUrl: './salve.component.html',
   styleUrls: ['./salve.component.css'],
 })
-<<<<<<< HEAD
-export class SalveComponent implements OnInit {
-
-  subscriptionIncrement: Subscription|undefined;
-  count:Number=0;
-  
-  constructor(private svc:NotificationService){
-  }
-=======
 export class SalveComponent implements OnInit, OnDestroy {
   subscriptionIncrement: Subscription | undefined;
   count: Number = 0;
   constructor(private svc: NotificationService) {}
->>>>>>> 3547711487a3567d1e80c6b2b27d2aa2f047d86c
 
   ngOnInit() {
     //Observers
