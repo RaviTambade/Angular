@@ -10,6 +10,8 @@
 - <a href="https://github.com/RaviTambade/Angular/blob/main/Directives.md">Angular Directives</a>
 - <a href="https://github.com/RaviTambade/Angular/blob/main/pipes.md">Angular Pipes</a>
 - <a href="https://github.com/RaviTambade/Angular/blob/main/lifecycle.md">Angular Component LifeCycle</a>
+- <a href="https://github.com/RaviTambade/Angular/blob/main/templateforms.md">Angular Template Forms</a>
+- <a href="https://github.com/RaviTambade/Angular/blob/main/reactiveforms.md">Angular Reactive Forms</a>
 - <a href="https://github.com/RaviTambade/Angular/blob/main/Services.md">Angular Services</a>
 - <a href="https://github.com/RaviTambade/Angular/blob/main/rxjs.md">Angular RxJS</a>
 - <a href="https://github.com/RaviTambade/Angular/blob/main/routing.md">Angular Routing</a>
