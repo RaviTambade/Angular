@@ -1,228 +1,71 @@
-# Reactive Form Example
+Angular provides two ways to work with forms: template-driven forms and reactive forms (also known as model-driven forms). 
 
-```
-import 'rxjs/Rx'; (1)
-.
-.
-.
-class FormAppComponent {
-  form: FormGroup; (2)
-  comment = new FormControl("", Validators.required); (3)
-  name = new FormControl("", Validators.required); (3)
-  email = new FormControl("", [ (3)
-    Validators.required,
-    Validators.pattern("[^ @]*@[^ @]*")
-  ]);
+Template-driven forms let us add directives to bind input values to reactive values and also to add form validation.
 
-  constructor(fb: FormBuilder) {
-    this.form = fb.group({ (4)
-      "comment": this.comment,
-      "name": this.name,
-      "email": this.email
-    });
-  }
-
-  onSubmit() {
-    console.log("Form submitted!");
-  }
-}
-```
+Reactive forms work by letting us create form objects and link them to forms, which lets us add validation. It binds input values to properties in reactive form objects so we can access input values and validate them.
 
 
-1. We import the full RxJS library into our application (this import includes all the operators).
-2. We create a form property which will hold a representation of our form so we can interact with it from code.
-3. We create individual instances of controls and rules for when user input is valid or invalid.
-4. We then link our form with the controls we created in the constructor using something called a FormBuilder.
+## What are Reactive Forms?
+Reactive forms objects are objects that provide us with synchronous access to form value data. They’re built from observables, so input values and the data value that they bind to are synchronous. Each change in a form state returns a new state.
 
-We create a form instance on our component, this instance exposes an observable, a stream of all the input fields combined into a object, via it’s valueChanges property.
+This is different from template-driven forms since changes are asynchronous in template-driven forms.
 
-We can subscribe to that observable and print our the current value of the form, like so:
-
-```
-constructor(fb: FormBuilder) {
-    this.form = fb.group({
-      "comment": this.comment,
-      "name": this.name,
-      "email": this.email
-    });
-    this.form.valueChanges
-        .subscribe( data => console.log(JSON.stringify(data)));
-  }
-
-```
-
-Then as I type into the form, this below gets printed to the console.
-
-```
-{"comment":"f","name":"","email":""}
-{"comment":"fo","name":"","email":""}
-{"comment":"foo","name":"","email":""}
-{"comment":"foo","name":"a","email":""}
-{"comment":"foo","name":"as","email":""}
-{"comment":"foo","name":"asi","email":""}
-{"comment":"foo","name":"asim","email":""}
-{"comment":"foo","name":"asim","email":"a"}
-{"comment":"foo","name":"asim","email":"as"}
-{"comment":"foo","name":"asim","email":"asi"}
-{"comment":"foo","name":"asim","email":"asim"}
-{"comment":"foo","name":"asim","email":"asim@"}
-
-```
+The synchronous nature of reactive forms makes testing reactive forms easier than template-driven forms
 
 
-## Processing Only Valid Form Values
+## When Do We Use Reactive Forms?
+- Reactive forms should be used in most Angular apps.
 
-Looking at the stream above we can see that most of the stream items are for invalid forms; comment, name and email are required so any form without a value for those is invalid. Also we have some special validation logic for the email field, it’s only valid if it contains an @ character.
+- The only benefit that template-driven forms have over reactive forms is that the syntax of template-driven forms is closer to Angular.js forms. Therefore, using template-driven forms would make migrating from Angular.js apps to Angular easier.
 
-In fact the only valid stream item is the last one {"comment":"foo","name":"asim","email":"asim@"}.
+- Other than that, there isn’t much benefit to using template-driven forms in our Angular apps. So unless we are migrating Angular.js apps to Angular, we should stick with reactive forms.
 
-That’s a common issue when dealing with forms, we only want to bother processing the results of a valid form, there really isn’t any point processing invalid form entries.
+- The immutability and the predictability because of the synchronous updates of reactive forms makes development much easier. In addition, reactive forms let us define the form’s structure explicitly so it’s easy to understand and better for scalability
 
-We can solve this by using another RxJS operator called filter. filter accepts a function and passes to it each item in the stream, if the function returns true filter publishes the input item to the output stream.
+Here are some of the advantages of reactive forms:
 
-```
+- Using custom validators
+- Changing validation dynamically
+- Dynamically adding form fields
 
-constructor(fb: FormBuilder) {
-    this.form = fb.group({
-      "comment": this.comment,
-      "name": this.name,
-      "email": this.email
-    });
-    this.form.valueChanges
-        .filter(data => this.form.valid)
-        .subscribe( data => console.log(JSON.stringify(data)));
-  }
+## What is angular form validation?
 
-```
+<p>Angular form validation is an integral technical process that verifies if any input provided by a user into a web-form is correct and complete. You can manage validation in a template-driven approach or with Angular reactive forms. Based on what is entered, the form will either allow users to proceed or will display a specific error message to help the user know where they went wrong with their data input.</p>
 
-this.form.valid is true when the whole form is valid. So while the form is invalid .filter(data ⇒ this.form.valid) doesn’t push items to the output stream, when the form is valid it does start pushing items to the output stream.
+<p>Depending on which validator failed, the on-screen error message gives feedback, indicating what is wrong and what exactly needs to be filled in or re-entered as data. In general, apps use forms to allow users to perform data-entry tasks like signing up, logging in, updating online profiles, submitting sensitive information, and more.</p>
 
-The end result of the above is that when we type into the form the same data as before, the only item that gets published in our subscribe callback is:
+<p>Angular runs form validation every time the value of a form input is changed and to confirm if data inputs filled in a web-form by a user are accurate and complete. To do that properly, Angular calls a list of validators which are run on every change that occurs.</p>
 
-```
-{"comment":"foo","name":"Asim","email":"asim@"}
-```
+<p>Validation of user-input from the UI can be done either with template-driven forms or with Angular reactive forms. Both of these forms are built on the following base classes:</p>
+- FormControl
+- FormGroup
+- FormArray
+- ControlValueAccessor
 
+## Angular reactive form validation
 
-Cleaning Form Data
-A comment input box is a dangerous place, hackers try to input things like <script> tags and if we are not careful we open ourselves to the possibility of hackers gaming our applications.
+<p>Reactive forms deliver a model-driven approach to managing form inputs, the values of which change with respect to time. Because reactive forms are built on a component class, Angular reactive form validation happens by adding validator functions directly to the form control model in the component class.</p>
 
-So one common safety measure for comment forms is to strip out HTML tags from the message before we post it anywhere.
+<p>When the value is valid, validators return null. If the value is invalid, validators generate a set of errors, and you can display a specific error message on the screen.</p>
 
-We can solve that again via a simple map operator on our form processing stream.
-constructor(fb: FormBuilder) {
-    this.form = fb.group({
-      "comment": this.comment,
-      "name": this.name,
-      "email": this.email
-    });
-    this.form.valueChanges
-        .filter(data => this.form.valid)
-        .map(data => {
-          data.comment = data.comment.replace(/<(?:.|\n)*?>/gm, '');
-          return data
-        })
-        .subscribe( data => console.log(JSON.stringify(data)));
-  }```
-
-```
+<p>There are built-in validators such as required, minlength, maxlength etc. However, you can also create your own validators.</p>
 
 
-We add another operator to our stream, specifically we added a map operator.
+## Angular form group validation
+<p>Form groups are basically a group of multiple related FormControlls that enable you to access the state of the encapsulated controls. Angular from group validation helps you track the value of group controls or a form as well as to track validation of the state of the form control. FormGroup is used with FormControl.</p>
 
-We added this after the filter operator, so this map operator only gets called when the previous filter operator publishes to its output stream. To put it another way, this map operator only gets called on valid form values.
+### Why would you need Angular form custom validation?
+<p>With custom validators you can address different functionality and ensure the values in a form meet certain criteria, which sometimes isn’t possible to do when using built-in validators only. If you want to validate a phone number or a specific password pattern, it’s best to create custom validator and rely on Angular form custom validation.</p>
 
-```
-
-.map(data => { (1)
-  data.comment = data.comment.replace(/<(?:.|\n)*?>/gm, ''); (2)
-  return data (3)
-})
-
-```
-
-1. The map operator gets passed the form object as a parameter called data.
-2. We apply a regular expression on the comment property to replace everything that could be a HTML tag with an empty string.
-3. What we return from the map function is what gets pushed to the map operators output stream.
-
-Now when we type into our form a comment of <script> this is what gets printed out:
-```
-{"comment":"<","name":"Asim","email":"asim@"}
-{"comment":"<s","name":"Asim","email":"asim@"}
-{"comment":"<sc","name":"Asim","email":"asim@"}
-{"comment":"<scr","name":"Asim","email":"asim@"}
-{"comment":"<scri","name":"Asim","email":"asim@"}
-{"comment":"<scrip","name":"Asim","email":"asim@"}
-{"comment":"<script","name":"Asim","email":"asim@"}
-{"comment":"","name":"Asim","email":"asim@"}
-```
+<p>With reactive forms, generating such is just as easy as writing a new function. And for model-driven forms (such is the reactive form in Angular) we create custom validation functions and send them to the FormControl constructor.</p>
 
 
-Focusing on the last line {"comment":"","name":"Asim","email":"asim@"} we can see that the <script> tag the user typed in, is stripped from the comment property.
+Angular has form validation built in as a feature. This lets us add forms with validation easily. It comes with two types of forms—reactive and template-driven forms.
 
-## Adding Form Values
-A useful feature would be if we could let the user know the last time the form was updated.
+Template-driven forms let us add directives to bind input values to reactive values and also to add form validation.
 
-We can solve this again by adding another map operator to our observable chain, this time we just add the current time to another property to our data object called lastUpdateTS, like so:
+Reactive forms work by letting us create form objects and link them to forms, which lets us add validation. It binds input values to properties in reactive form objects so we can access input values and validate them. It also lets us add form validation in an explicit manner and we can use the provided validators to add validations to fields.
 
-```
-constructor(fb: FormBuilder) {
-    this.form = fb.group({
-      "comment": this.comment,
-      "name": this.name,
-      "email": this.email
-    });
-    this.form.valueChanges
-        .filter(data => this.form.valid)
-        .map(data => {
-          data.comment = data.comment.replace(/<(?:.|\n)*?>/gm, '');
-          return data
-        })
-        .map(data => {
-          data.lastUpdateTS = new Date();
-          return data
-        })
-        .subscribe( data => console.log(JSON.stringify(data)));
-  }
-```
+From groups let us organize forms fields into groups and we can nest form groups easily. We can also get and set form values easily in a synchronous manner with reactive forms.
 
-This second map operator simply adds a property to our data object and then pushes the data object onto its output stream.
-
-If we now ran our application we would see this printed out:
-```
-{"comment":"f","name":"Asim","email":"asim@","lastUpdateTS":"2016-10-03T20:33:45.980Z"}
-{"comment":"fo","name":"Asim","email":"asim@","lastUpdateTS":"2016-10-03T20:33:46.187Z"}
-{"comment":"foo","name":"Asim","email":"asim@","lastUpdateTS":"2016-10-03T20:33:46.364Z"}
-```
-
-
-## Not Using Observables
-
-In Angular we don’t need to use observables, and therefore reactive programming, if we don’t want to.
-
-Instead of adding operators to the observable chain we can choose to just subscribe and do the processing in the callback, like so:
-
-```
-constructor(fb: FormBuilder) {
-    this.form = fb.group({
-      "comment": this.comment,
-      "name": this.name,
-      "email": this.email
-    });
-    this.form.valueChanges
-        .subscribe( data => {
-          if (this.form.valid) {
-            data.comment = data.comment.replace(/<(?:.|\n)*?>/gm, '');
-            data.lastUpdateTS = new Date();
-            console.log(JSON.stringify(data))
-          }
-        });
-  }
-```
-
-
-Angular exposes RxJS observables in a small but important number of places in Angular. The EventEmitter, HTTP and Reactive Forms.
-
-We use operators to add to the observable chain and then subscribe to the output and perform actual real life actions in our application, either change the state of variables or call functions.
-
-We can choose to take advantage of that and code reactively, or we can just subscribe to the observable and code imperatively.
+Therefore, reactive forms are better than template-driven forms or creating our own form field binding and validation solutions in almost all cases.

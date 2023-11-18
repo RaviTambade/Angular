@@ -18,12 +18,17 @@ import { MasterComponent } from './Catalog/effects/peertopeer/master/master.comp
 import { SalveComponent } from './Catalog/effects/peertopeer/salve/salve.component';
 import { FlowersComponent } from './custom/flowers/flowers.component';
 
+import {TFLReactiveFormsModule} from './reactiveforms/tflreactive-forms/tflreactive-forms.module';
+import { ContactFormValidComponent } from './reactiveforms/contact-form-valid/contact-form-valid.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     MasterComponent,
     SalveComponent,
     FlowersComponent,
+    ContactFormValidComponent,
+  
 
   ],
   imports: [
@@ -36,6 +41,7 @@ import { FlowersComponent } from './custom/flowers/flowers.component';
     MembershipModule,
     GraphicsModule,
     TemplateFormsModule,
+    TFLReactiveFormsModule,
     ReusableModule,
     ObservableModule,
     SPAModule,
