@@ -18,6 +18,9 @@
       ],
       "membership": [
         "dist/membership"
+      ],
+      "membershipLib": [
+        "dist/membership-lib"
       ]
     },
     "noFallthroughCasesInSwitch": true,

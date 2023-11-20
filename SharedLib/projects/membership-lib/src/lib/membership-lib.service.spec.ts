@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { MembershipService } from './membership.service';
+import { MembershipLibService } from './membership-lib.service';
 
-describe('MembershipService', () => {
-  let service: MembershipService;
+describe('MembershipLibService', () => {
+  let service: MembershipLibService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(MembershipService);
+    service = TestBed.inject(MembershipLibService);
   });
 
   it('should be created', () => {
