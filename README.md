@@ -13,8 +13,9 @@
 - <a href="https://github.com/RaviTambade/Angular/blob/main/templateforms.md">Angular Template Forms</a>
 - <a href="https://github.com/RaviTambade/Angular/blob/main/reactiveforms.md">Angular Reactive Forms</a>
 - <a href="https://github.com/RaviTambade/Angular/blob/main/Services.md">Angular Services</a>
+- <a href="https://github.com/RaviTambade/Angular/blob/main/changedetection.md">Change Detection</a>
 - <a href="https://github.com/RaviTambade/Angular/blob/main/rxjs.md">Angular RxJS</a>
-- <a href="https://github.com/RaviTambade/Angular/blob/main/routing.md">Angular Routing</a>
+- <a href="https://github.com/RaviTambade/Angular/blob/main/Routing.md">Angular Routing</a>
 - <a href="https://github.com/RaviTambade/Angular/blob/main/lazyloading.md">Lazy Loading</a>
 - <a href="https://github.com/RaviTambade/Angular/blob/main/AngularLibraryDRY.md">Angular Libraries</a>
 - <a href="https://github.com/RaviTambade/Angular/blob/main/multilingual.md">Angular Multilingual User Interface</a>
