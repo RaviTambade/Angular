@@ -1,7 +1,6 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { IUser } from '../Iuser';
 import { HttpEventType } from '@angular/common/http';
-import { UUID } from 'angular2-uuid';
 import { MembershipLibService } from '../membership-lib.service';
 
 @Component({
@@ -66,7 +65,7 @@ export class UserprofileComponent {
       const formData = new FormData();
       if (this.user.imageUrl == this.defaultImage) {
         this.user.imageUrl =
-          UUID.UUID() + '.' + this.selectedFile.name.split('.').pop();
+          crypto.randomUUID()+ '.' + this.selectedFile.name.split('.').pop();
       }
 
       formData.append('file', this.selectedFile, this.user.imageUrl);

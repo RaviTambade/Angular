@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "mem":"npm cache clean --force pacote:tarball:file:..\\..\\..\\Angular\\SharedLib\\dist\\membership-lib\\membership-lib-0.0.1.tgz & ng build membershipLib & cd dist/membership-lib & npm pack",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

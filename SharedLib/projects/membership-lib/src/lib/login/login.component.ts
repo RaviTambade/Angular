@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ICredential } from '../icredential';
 import { MembershipLibService } from '../membership-lib.service';
@@ -9,6 +9,7 @@ import { MembershipLibService } from '../membership-lib.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  @Input() lob:string='';
   credential: ICredential;
   loginForm!: FormGroup;
   showPassword: boolean = false;
@@ -54,6 +55,7 @@ export class LoginComponent {
     let credential: ICredential = {
       contactNumber: this.contactnumber.value,
       password: this.password.value,
+      lob:this.lob
     };
 
     this.membershipSvc.signIn(credential).subscribe({
