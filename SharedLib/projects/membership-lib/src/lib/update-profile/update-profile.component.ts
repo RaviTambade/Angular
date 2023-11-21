@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { IUser } from '../Iuser';
 import { MembershipLibService } from '../membership-lib.service';
+import { StateChangeEvent } from '../stateChangeEvent';
 
 @Component({
   selector: 'membership-update-profile',
@@ -21,7 +22,7 @@ export class UpdateProfileComponent {
     contactNumber: '',
   };
 
-  @Output() onUdateFinished = new EventEmitter();
+  @Output() onUpdateFinished = new EventEmitter<StateChangeEvent>();
 
   userForm: FormGroup;
 
@@ -30,12 +31,12 @@ export class UpdateProfileComponent {
       firstName: new FormControl('', [
         Validators.required,
         Validators.minLength(2),
-        Validators.maxLength(250),
+        Validators.maxLength(50),
       ]),
       lastName: new FormControl('', [
         Validators.required,
         Validators.minLength(2),
-        Validators.maxLength(250),
+        Validators.maxLength(50),
       ]),
       aadharId: new FormControl('', [
         Validators.required,
@@ -45,7 +46,11 @@ export class UpdateProfileComponent {
       ]),
       birthDate: new FormControl('', [Validators.required]),
       gender: new FormControl('', [Validators.required]),
-      email: new FormControl('', [Validators.required, Validators.email]),
+      email: new FormControl('', [
+        Validators.required,
+        Validators.maxLength(50),
+        Validators.email,
+      ]),
     });
   }
   ngOnInit(): void {
@@ -105,12 +110,12 @@ export class UpdateProfileComponent {
       this.user.email = this.email.value;
 
       this.svc.updateUser(this.user.id, this.user).subscribe((response) => {
-        this.onUdateFinished.emit({ isUpdated: true });
+        this.onUpdateFinished.emit({ isStateUpdated: true });
       });
     }
   }
 
   cancelupdateUser() {
-    this.onUdateFinished.emit({ isUpdated: false });
+    this.onUpdateFinished.emit({ isStateUpdated: false });
   }
 }

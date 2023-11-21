@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { ICredential } from './icredential';
 import { IUpdatePassword } from './iupdate-password';
 import { IUser } from './Iuser';
+import { Address } from './address';
 
 @Injectable({
   providedIn: 'root',
@@ -32,11 +33,21 @@ export class MembershipLibService {
     let url = `http://localhost:5142/api/users/${id}`;
     return this.httpClient.put<any>(url, user);
   }
-  uploadFile(filename:string,formData:FormData): Observable<any> {
-    let url = `$http://localhost:5142/api/files/fileupload/${filename}`;
+  uploadFile(filename: string, formData: FormData): Observable<any> {
+    let url = `http://localhost:5142/api/files/fileupload/${filename}`;
     return this.httpClient.post<any>(url, formData, {
       reportProgress: true,
       observe: 'events',
     });
+  }
+
+  addAddress(address: Address): Observable<boolean> {
+    let url = `http://localhost:5142/api/addresses`;
+    return this.httpClient.post<boolean>(url, address);
+  }
+
+  updateAddress(addressId: number, address: Address): Observable<boolean> {
+    let url = `http://localhost:5142/api/addresses/${addressId}`;
+    return this.httpClient.put<boolean>(url, address);
   }
 }

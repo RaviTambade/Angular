@@ -9,6 +9,7 @@ import {
 } from '@angular/forms';
 import { MembershipLibService } from '../membership-lib.service';
 import { IUpdatePassword } from '../iupdate-password';
+import { StateChangeEvent } from '../stateChangeEvent';
 
 export function confirmPasswordValidator(): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
@@ -28,9 +29,11 @@ export class ChangePasswordComponent {
   showNewPassword: boolean = false;
   showConfirmPassword: boolean = false;
 
+  isInvalidCredentails: boolean = false;
+
   changePasswordForm!: FormGroup;
 
-  @Output() onPasswordChange = new EventEmitter();
+  @Output() onPasswordChange = new EventEmitter<StateChangeEvent>();
   constructor(private membershipSvc: MembershipLibService) {}
 
   ngOnInit(): void {
@@ -39,14 +42,17 @@ export class ChangePasswordComponent {
         oldPassword: new FormControl('', [
           Validators.required,
           Validators.minLength(8),
+          Validators.maxLength(25),
         ]),
         newPassword: new FormControl('', [
           Validators.required,
           Validators.minLength(8),
+          Validators.maxLength(25),
         ]),
         confirmPassword: new FormControl('', [
           Validators.required,
           Validators.minLength(8),
+          Validators.maxLength(25),
         ]),
       },
       { validators: [confirmPasswordValidator()] }
@@ -83,12 +89,17 @@ export class ChangePasswordComponent {
     this.membershipSvc.changePassword(credential).subscribe((response) => {
       if (response) {
         alert('Password changed');
-        this.onPasswordChange.emit();
+        this.onPasswordChange.emit({ isStateUpdated: true });
+      } else {
+        this.isInvalidCredentails = true;
+        setTimeout(() => {
+          this.isInvalidCredentails = false;
+        }, 3000);
       }
     });
   }
 
   onCancelClick() {
-    this.onPasswordChange.emit();
+    this.onPasswordChange.emit({ isStateUpdated: false });
   }
 }

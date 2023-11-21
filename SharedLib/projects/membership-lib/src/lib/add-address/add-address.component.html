@@ -1,0 +1,186 @@
+<div class="row">
+    <div class="mb-4">
+        <div class="card mb-4">
+            <div class="card-body " style="margin-left: 2rem;margin-right: 6rem;">
+                <form [formGroup]="addressForm" (ngSubmit)="onSubmit()">
+                    <div class="col-md-6 d-flex justify-content-between mb-4">
+                        <label class="form-label">AddressType</label>
+                        <div class="form-check">
+                            <input type="radio" id="male" formControlName="addressType" value="Residential"
+                                class="form-check-input">
+                            <label for="addressType" class="form-check-label">Residential</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" id="female" formControlName="addressType" value="Billing"
+                                class="form-check-input">
+                            <label for="addressType" class="form-check-label">Billing</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" id="other" formControlName="addressType" value="Official"
+                                class="form-check-input">
+                            <label for="addressType" class="form-check-label">Official</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-floating mb-4">
+                            <textarea class="form-control" placeholder="Address(Area and Street)" rows="3"
+                                formControlName="area"
+                                [class.is-invalid]="area.invalid && (area.dirty || area.touched)"></textarea>
+                            <label> Address(Area and Street) <span class="text-danger"> &ast; </span></label>
+
+                            <div *ngIf="area.invalid && (area.dirty || area.touched )" class="invalid-feedback">
+                                <div *ngIf="area.errors?.['required']">
+                                    This field is required.
+                                </div>
+                                <div *ngIf="area.errors?.['minlength']">
+                                    Minimum 2 characters are required for this field .
+                                </div>
+                                <div *ngIf="area.errors?.['maxlength']">
+                                        Maximum 50 characters are allowed for this field .
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" placeholder="Landmark(optional)"
+                                    formControlName="landmark"
+                                    [class.is-invalid]="landmark.invalid && (landmark.dirty || landmark.touched)" />
+                                <label>Landmark<span class="text-danger"> &ast; </span></label>
+                                <div *ngIf="landmark.invalid && (landmark.dirty || landmark.touched)"
+                                    class="invalid-feedback">
+                                    <div *ngIf="landmark.errors?.['required']">
+                                        This field is required.
+                                    </div>
+                                    <div *ngIf="landmark.errors?.['minlength']">
+                                        Minimum 2 characters are required for this field .
+                                    </div>
+                                    <div *ngIf="landmark.errors?.['maxlength']">
+                                        Maximum 50 characters are allowed for this field .
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="form-floating ">
+                                <input type="text" class="form-control" placeholder="Pincode" formControlName="pincode"
+                                    [class.is-invalid]="pincode.invalid && (pincode.dirty || pincode.touched)" />
+                                <label>Pincode <span class="text-danger">&ast;</span> </label>
+
+                                <div *ngIf="pincode.invalid && (pincode.dirty || pincode.touched )"
+                                    class="invalid-feedback">
+                                    <div *ngIf="pincode.errors?.['required']">
+                                        This field is required.
+                                    </div>
+                                    <div *ngIf="pincode.errors?.['minlength']">
+                                        This field should contains 6 characters.
+                                    </div>
+                                    <div *ngIf="pincode.errors?.['maxlength']">
+                                        This field should contains 6 characters.
+                                    </div>
+                                    <div
+                                        *ngIf="!pincode.errors?.['minlength'] && !pincode.errors?.['maxlength']&& pincode.errors?.['pattern']">
+                                        Invalid pincode Format try e.g 123456
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" placeholder="City/District/Town"
+                                    formControlName="city"
+                                    [class.is-invalid]="city.invalid && (city.dirty || city.touched)">
+                                <label>City/District/Town <span class="text-danger">&ast;</span></label>
+                                <div *ngIf="city.invalid && (city.dirty || city.touched)" class="invalid-feedback">
+                                    <div *ngIf="city.errors?.['required']">
+                                        This field is required.
+                                    </div>
+                                    <div *ngIf="city.errors?.['minlength']">
+                                        Minimum 2 characters are required for this field .
+                                    </div>
+                                    <div *ngIf="city.errors?.['maxlength']">
+                                        Maximum 20 characters are allowed for this field                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col">
+                            <div class="form-floating ">
+                                <select type="text" class="form-control" placeholder="State" formControlName="state"
+                                    [class.is-invalid]="state.invalid && (state.dirty || state.touched)">
+                                    <option value=""> -- Select State --</option>
+                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                    <option value="Assam">Assam</option>
+                                    <option value="Bihar">Bihar</option>
+                                    <option value="Chandigarh">Chandigarh</option>
+                                    <option value="Chhattisgarh">Chhattisgarh</option>
+                                    <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                    <option value="Daman and Diu">Daman and Diu</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Lakshadweep">Lakshadweep</option>
+                                    <option value="Puducherry">Puducherry</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Haryana">Haryana</option>
+                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                    <option value="Jharkhand">Jharkhand</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Manipur">Manipur</option>
+                                    <option value="Meghalaya">Meghalaya</option>
+                                    <option value="Mizoram">Mizoram</option>
+                                    <option value="Nagaland">Nagaland</option>
+                                    <option value="Odisha">Odisha</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Sikkim">Sikkim</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Telangana">Telangana</option>
+                                    <option value="Tripura">Tripura</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="Uttarakhand">Uttarakhand</option>
+                                    <option value="West Bengal">West Bengal</option>
+                                </select>
+                                <label>State <span class="text-danger">&ast;</span></label>
+
+                                <div *ngIf="state.invalid && (state.dirty || state.touched)" class="invalid-feedback">
+                                    <div *ngIf="state.errors?.['required']">
+                                        This field is required.
+                                    </div>
+                                    <div *ngIf="state.errors?.['minlength']">
+                                        Minimum 2 characters are required for this field .
+                                    </div>
+                                    <div *ngIf="state.errors?.['maxlength']">
+                                        Maximum 30 characters are allowed for this field .
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row mb-4">
+                        <div class="col d-flex justify-content-around">
+                            <button type="submit" class="btn btn-primary"> Add
+                                Address</button>
+                            <button type="reset" class="btn btn-secondary" (click)="onCancelClick()">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

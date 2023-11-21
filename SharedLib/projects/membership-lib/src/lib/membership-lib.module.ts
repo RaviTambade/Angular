@@ -6,8 +6,8 @@ import { CommonModule } from '@angular/common';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
-
-
+import { AddAddressComponent } from './add-address/add-address.component';
+import { UpdateAddressComponent } from './update-address/update-address.component';
 
 @NgModule({
   declarations: [
@@ -15,18 +15,19 @@ import { UpdateProfileComponent } from './update-profile/update-profile.componen
     LoginComponent,
     UserprofileComponent,
     ChangePasswordComponent,
-    UpdateProfileComponent
+    UpdateProfileComponent,
+    AddAddressComponent,
+    UpdateAddressComponent,
   ],
-  imports: [
-    CommonModule,
-    ReactiveFormsModule
-  ],
+  imports: [CommonModule, ReactiveFormsModule],
   exports: [
     // MembershipLibComponent
     LoginComponent,
     UserprofileComponent,
     ChangePasswordComponent,
-    UpdateProfileComponent
-  ]
+    UpdateProfileComponent,
+    AddAddressComponent,
+    UpdateAddressComponent,
+  ],
 })
-export class MembershipLibModule { }
+export class MembershipLibModule {}

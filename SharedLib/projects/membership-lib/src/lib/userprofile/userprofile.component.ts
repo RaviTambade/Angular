@@ -2,6 +2,7 @@ import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { IUser } from '../Iuser';
 import { HttpEventType } from '@angular/common/http';
 import { MembershipLibService } from '../membership-lib.service';
+import { StateChangeEvent } from '../stateChangeEvent';
 
 @Component({
   selector: 'membership-userprofile',
@@ -65,7 +66,7 @@ export class UserprofileComponent {
       const formData = new FormData();
       if (this.user.imageUrl == this.defaultImage) {
         this.user.imageUrl =
-          crypto.randomUUID()+ '.' + this.selectedFile.name.split('.').pop();
+          crypto.randomUUID() + '.' + this.selectedFile.name.split('.').pop();
       }
 
       formData.append('file', this.selectedFile, this.user.imageUrl);
@@ -95,9 +96,9 @@ export class UserprofileComponent {
     this.updatePasswordStatus = false;
   }
 
-  closeEditUserComponent(event: any) {
+  closeEditUserComponent(event: StateChangeEvent) {
     this.updateProfileStatus = false;
-    if (event.isUpdated) {
+    if (event.isStateUpdated) {
       this.getUser(this.user.id);
     }
   }
@@ -107,7 +108,7 @@ export class UserprofileComponent {
     this.updateProfileStatus = false;
   }
 
-  closePasswordChangeComponent() {
+  closePasswordChangeComponent(event: StateChangeEvent) {
     this.updatePasswordStatus = false;
   }
 }
