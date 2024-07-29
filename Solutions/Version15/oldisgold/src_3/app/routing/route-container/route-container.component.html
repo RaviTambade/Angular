@@ -1,0 +1,37 @@
+<h2>Single Page Application Demo</h2>
+<div>
+    <sign-in></sign-in>
+
+    <div>
+      <a [routerLink]="['/home']">Home</a>|
+      <a [routerLink]="['/about']">About us</a>|
+      <a [routerLink]="['/contact']">Contact us</a>|
+      <a [routerLink]="['/lists']">Products</a>|
+      <a [routerLink]="['/services']">Services</a>|
+      <a [routerLink]="['/dashboard']">Dashboard</a>|
+      <a *ngIf="status" [routerLink]="['/protected']">Protected</a>
+    </div>
+   
+    <router-outlet></router-outlet>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <div *ngFor="let link of links">
+          <a [routerLink]="link.path">{{ link.text }}</a>
+</div>-->

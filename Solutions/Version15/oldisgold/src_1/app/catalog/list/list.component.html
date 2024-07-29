@@ -1,0 +1,7 @@
+<h1>All Products</h1>
+<p tflUnderline>Transflower Learning Pvt Ltd.</p>
+<p [myHidden]=true>Show my Data</p>
+<div *ngFor="let product of allProducts | sellingflowers">
+ <p> Title: {{product.title |uppercase}}</p>
+<!-- <p> Title: {{product.description}}</p>-->
+</div>

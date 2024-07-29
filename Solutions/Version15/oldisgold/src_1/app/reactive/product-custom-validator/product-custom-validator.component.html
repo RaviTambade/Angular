@@ -1,0 +1,16 @@
+<h2>Custom Validator</h2>
+<form [formGroup]="productForm"
+      (ngSubmit)="onSubmit(productForm.value)">
+  <div>
+    <label for="codeInput">Flower Code</label>
+    <input type="text" id="codeInput" 
+     placeholder="code" [formControl]="code">
+     <div *ngIf="!code.valid">code is invalid</div>
+     <div *ngIf="code.hasError('required')">Flower Code is required</div>
+     <div *ngIf="code.hasError('invalidcode')">
+           Code must begin with <span>TFL</span>
+     </div>
+  </div>
+  <div *ngIf="!productForm.valid">Form is invalid</div>
+  <button type="submit" [disabled]="!productForm.valid">Submit</button>
+</form>

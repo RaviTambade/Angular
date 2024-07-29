@@ -1,0 +1,33 @@
+<h2>Insert New Product</h2>
+<hr/>
+
+<table>
+  <tr>
+    <label>Title</label>
+    <input type=text  [(ngModel)]="theProduct.title"/>
+    <label>{{theProduct.title}}</label>
+  </tr>
+  <tr>
+    <label>Description</label>
+    <input type=text  [(ngModel)]="theProduct.description"/>
+  </tr>
+  <tr>
+    <label>Unit Price</label>
+    <input type=text [(ngModel)]="theProduct.price" />
+  </tr>
+  <tr>
+    <label>Quantity</label>
+    <input type=text [(ngModel)]="theProduct.quantity" />
+  </tr>
+  <tr>
+    <label>Likes</label>
+    <input type=text [(ngModel)]="theProduct.likes" />
+  </tr>
+  <tr>
+    <label>Image</label>
+    <input type=text [(ngModel)]="theProduct.imageUrl" />
+  </tr>
+
+  <tr><button type="button" (click)="onInsert()">Insert</button></tr>
+</table>
+

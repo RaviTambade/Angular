@@ -1,0 +1,45 @@
+<div>
+  <h4 class=" container-fluid">
+    {{displayMonth}}
+
+  </h4> 
+
+    <div>
+        <input type="button" class="mx-2" (click)="setCurrentMonth()" value="today" />
+        <input type="button" class="mx-2" (click)="decreaseMonth()" value="<" />
+        <input type="button" class="mx-2" (click)="increaseMonth()" value=">" />
+    </div>
+</div>
+
+<table class='calendar-table' *ngIf="calendar">
+    <thead>
+        <tr>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of calendar | chunk: 7; let i = index">
+            <td class="calendar-day" [ngClass]="{'past-date': c.isPastDate}"
+                *ngFor="let c of row; let j = index">
+                <div  [ngClass]="{'blue-date': c.isToday}" (click)="onClick(c)">
+                    <strong>{{c.date.getDate()}}</strong> <strong
+                        *ngIf="c.isToday || (i==0 && j==0) || (c.date.getDate() == 1)">
+                        {{monthNames[c.date.getMonth()]}}</strong>
+                        <div>
+                            <p>****</p>
+                            <p>PP</p>
+
+                        </div>
+                        
+                    </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

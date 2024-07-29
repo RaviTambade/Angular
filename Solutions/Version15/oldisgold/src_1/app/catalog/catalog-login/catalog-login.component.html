@@ -1,0 +1,32 @@
+<div>
+  <h1>Login</h1>
+     <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)">
+       <table>
+         <tr>
+           <td>
+             <label>Name:</label></td>
+             <td><input type="text" name="firstName" [(ngModel)]="user.firstName" 
+              required minlength="3" maxlength="8" #firstName="ngModel"/>
+            <small [hidden]="firstName.valid || (firstName.pristine && !loginForm.submitted)">
+              Name is Required min 3 and max 8
+            </small>
+            </td>           
+         </tr>
+         <tr>
+          <td>
+            <label>Password:</label></td>
+            <td><input type="password" name="userpassword" [(ngModel)]="user.password"
+                 required #userpassword="ngModel" />
+                <small [hidden]="userpassword.valid || (userpassword.pristine &&!loginForm.submitted)">
+                  Password is Required
+                </small> 
+                </td>           
+        </tr>
+        <tr>
+          <td>
+            <button type="submit" [disabled]="!loginForm.form.valid">Submit</button>
+          </td>
+        </tr>
+       </table>
+     </form>
+</div>

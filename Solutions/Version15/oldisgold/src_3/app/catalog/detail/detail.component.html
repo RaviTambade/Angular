@@ -1,0 +1,51 @@
+<h1 [hidden]="true"> This is my message</h1>
+
+
+<h2>Product Details</h2>
+<hr/>
+
+<table> 
+  <tr>
+    <label>Description</label>
+    <label>{{theProduct.title}}</label>
+  </tr>
+  <tr>
+    <label>Unit Price</label>
+    <label>{{theProduct.description}}</label>
+  </tr>
+  <tr>
+    <label>Quantity</label>
+    <label>{{theProduct.quantity}}</label>
+  </tr>
+  <tr>
+    <label>Likes</label>
+    <label>{{theProduct.likes}}</label>
+  </tr>
+  <tr>
+    <label>Image</label>
+    <img src="{{theProduct.imageUrl}}" width=100 height="100"/>
+  </tr>
+
+  <tr>
+    <!--Step 5  define counter component as child as well as pass like to count
+       and register update event with onCounterUpdate() event handler...-->
+   
+    <!--<app-counter [hidden]="status" count="{{theProduct.likes}}"  
+                (update)="onCounterUpdate($event)">
+
+
+   </app-counter>
+   -->
+
+   <app-counter *ngIf="!status" count="{{theProduct.likes}}"  
+                (update)="onCounterUpdate($event)">
+
+
+   </app-counter>
+
+   
+  </tr>
+  <tr><button type="button" (click)="onUpdate()">Hide</button></tr>
+  <tr><button type="button" (click)="onRemove()">Show</button></tr>
+  <tr><button type="button" (click)="onAddToCart()">Add to Cart</button></tr>
+</table>

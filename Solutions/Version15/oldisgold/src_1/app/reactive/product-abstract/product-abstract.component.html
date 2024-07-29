@@ -1,0 +1,13 @@
+<h2> Form Validation</h2>
+    <form [formGroup]="productForm"(ngSubmit)="onSubmit(productForm.value)">
+       
+      <div>
+          <label for="titlelInput">Title</label>
+          <input type="text"  id="titlelInput"  [formControl]="title">
+       </div>
+       <div >
+          <label for="quantityInput">Quantity</label>
+          <input type="number"  id="quantityInput"  [formControl]="quantity">
+       </div>
+      <button type="submit" [disabled]="!productForm.valid">Submit</button>
+    </form>

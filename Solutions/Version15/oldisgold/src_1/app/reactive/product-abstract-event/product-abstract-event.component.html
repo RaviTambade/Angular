@@ -1,0 +1,14 @@
+<h2>Event Subscription</h2>
+<form [formGroup]="productForm" (ngSubmit)="onSubmit(productForm.value)">
+<div>
+    <label for="titleInput">Title</label>
+    <input type="text" id="titleInput" placeholder="Enter Flower"
+           [formControl]="title_t">
+</div> 
+<div>
+    <label for="descriptionInput">Flower</label>
+    <input type="text" id="descriptionInput" placeholder="Enter Description"
+           [formControl]="description">
+</div> 
+<button type="submit" [disabled]="!productForm.valid">Submit</button>
+</form>

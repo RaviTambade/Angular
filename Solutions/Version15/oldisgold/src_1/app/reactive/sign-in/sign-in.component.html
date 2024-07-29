@@ -1,0 +1,28 @@
+<h2>Form Builder</h2>
+<h1> Ractive Login</h1>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+    <table>
+    <tr>
+        <td> <label for="userNameInput">Email</label></td>
+        <td> <input type="email" id="userNameInput" 
+                    placeholder="Enter User EmailId"
+                    [formControl]="loginForm.controls['email']">
+                    <div *ngIf="loginForm.controls['email'].hasError('required')">Email is required</div>
+                    <div *ngIf="!loginForm.controls['email'].valid"> Email  is not in format invalid</div>
+        </td>
+    </tr>
+  <tr>
+        <td> <label for="passwordInput">Password</label></td>
+        <td> <input type="password" id="passwordInput" 
+                    placeholder="Enter Password"
+                    [formControl]="loginForm.controls['password']">
+             <div *ngIf="!loginForm.controls['password'].valid">Password is Required</div>
+             
+        </td>
+   </tr>    
+    <tr>
+        <td><div *ngIf="!loginForm.valid">Form is invalid</div>
+            <button type="submit" [disabled]="!loginForm.valid">Submit</button>
+        </td>
+    </tr>
+  </table>
