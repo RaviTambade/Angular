@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "mem":"npm cache clean --force pacote:tarball:file:..\\..\\..\\Angular\\SharedLib\\dist\\membership-lib\\membership-lib-0.0.1.tgz & ng build membershipLib & cd dist/membership-lib & npm pack",
+    "mem": "npm cache clean --force pacote:tarball:file:..\\..\\..\\Angular\\SharedLib\\dist\\membership-lib\\membership-lib-0.0.1.tgz & ng build membershipLib & cd dist/membership-lib & npm pack",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "^15.1.0",
     "@angular/router": "^15.1.0",
     "rxjs": "~7.8.0",
+    "shared-lib": "file:",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
   },

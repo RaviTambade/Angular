@@ -1,0 +1,17 @@
+
+<div style="max-width:300px; margin:auto; padding:20px; border:1px solid #ccc; border-radius:8px;">
+      <h2>Login</h2>
+      <form (ngSubmit)="onLogin()">
+        <div>
+          <label for="username">Username:</label><br>
+          <input id="username" [(ngModel)]="username" name="username" required />
+        </div>
+        <div style="margin-top:10px;">
+          <label for="password">Password:</label><br>
+          <input id="password" [(ngModel)]="password" name="password" type="password" required />
+        </div>
+        <button type="submit" style="margin-top:15px;">Login</button>
+      </form>
+
+      <p *ngIf="message" style="margin-top:10px; color:green;">{{ message }}</p>
+</div>
