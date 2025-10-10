@@ -25,7 +25,6 @@ You’re used to:
 
 This is where **modern UI frameworks** come in.
 
-
 ## 2️⃣ Why Frameworks Like Angular Exist
 
 Frameworks like **Angular, React, Vue** solve these problems:
@@ -36,7 +35,6 @@ Frameworks like **Angular, React, Vue** solve these problems:
 4. **Routing & navigation** → Built-in ways to navigate pages without full page reloads.
 5. **Form handling & validation** → Easier to build complex forms.
 6. **Testing & maintainability** → Structured code is easier to test and maintain.
-
 
 
 ## 3️⃣ Why Angular Specifically?
@@ -107,6 +105,153 @@ Since you already know **HTML, CSS, JS, jQuery**, your upgrade path is:
 
 > Gradually, you’ll move from writing **imperative DOM code** to **declarative, component-driven Angular applications**.
  
+Ah! If you want to **explicitly create an Angular 17 project** using the Angular CLI (`ng new`), you need to be careful with **version flags and options**, because by default `ng new` will use the **latest globally installed Angular CLI** version.
+
+Here’s a **step-by-step guide**:
+
+
+
+## 1️⃣ Check your Angular CLI version
+
+```bash
+ng version
+```
+
+* Look for `Angular CLI:` version
+* If it’s **17.x**, you can directly use `ng new`
+* If not, you need to install **Angular CLI 17** globally or use `npx`
+
+
+
+## 2️⃣ Install Angular CLI 17 (if needed)
+
+```bash
+npm uninstall -g @angular/cli
+npm install -g @angular/cli@17
+```
+
+Or use **npx** to use a specific version temporarily:
+
+```bash
+npx -p @angular/cli@17 ng new my-app
+```
+
+
+
+## 3️⃣ Create a new Angular 17 project
+
+Basic command:
+
+```bash
+ng new my-app
+```
+
+### Optional flags to explicitly specify Angular 17 features:
+
+| Flag             | Purpose                                                              |
+| ---------------- | -------------------------------------------------------------------- |
+| `--standalone`   | Makes root component and future components **standalone by default** |
+| `--routing`      | Adds Angular Router to the project                                   |
+| `--style=scss`   | Use SCSS for styles (or `css`, `sass`, `less`)                       |
+| `--skip-tests`   | Skip generating test files                                           |
+| `--skip-install` | Skip `npm install` if you want to install manually later             |
+
+Example:
+
+```bash
+ng new my-app --standalone --routing --style=scss
+```
+
+✅ This creates a **modern Angular 17 project** with:
+
+* Standalone components enabled by default
+* Routing pre-configured
+* SCSS styling
+
+---
+
+## 4️⃣ Serve your Angular 17 project
+
+```bash
+cd my-app
+ng serve --open
+```
+
+* Opens your app in the browser
+* If Angular 17 CLI is installed, this will run using Angular 17
+---
+
+## 5️⃣ Optional: Explicitly verify Angular version
+
+```bash
+ng version
+```
+
+You should see:
+
+```
+Angular: 17.x.x
+CLI: 17.x.x
+```
+
+
+💡 **Tip:** Using `npx @angular/cli@17` is very handy if your global CLI is older, or if you want to test a project with Angular 17 **without changing your global CLI**.
+
+
+### **Why your CLI shows Angular 20 devkit but you want Angular 17**
+
+1. **Angular CLI vs Angular Framework**
+
+   * The **CLI version** (`ng version`) and the **Angular framework version** (`@angular/core`) are separate.
+   * Your CLI is **currently using Angular DevKit 20.x** (`@angular-devkit/core 20.2.0`) → that means the CLI is **capable of generating projects for Angular 20** by default.
+   * The CLI itself is **backward-compatible** and can scaffold older Angular projects, but it won’t automatically downgrade packages.
+
+2. **ng new always uses latest packages by default**
+
+   * When you run:
+
+     ```bash
+     ng new my-app
+     ```
+
+     The CLI will create a project with the **latest Angular version compatible with your CLI** (in your case, Angular 20.x), **even if you want 17.x**.
+
+3. **How to explicitly create Angular 17 projects**
+
+   * You must tell the CLI **which version to use** using `--version`:
+
+     ```bash
+     ng new my-app --version=17
+     ```
+   * This will scaffold a project with Angular 17 packages like `@angular/core@17.x` and the matching `@angular/cli` devDependency inside your project.
+   * Note: The **global CLI can remain at 20.x**, it’s fine. The project itself will lock Angular 17 locally.
+
+4. **Why DevKit versions look newer**
+
+   * The DevKit packages (`@angular-devkit/core`, `architect`, `schematics`) are tied to the **CLI version**, not the Angular version you want.
+   * So even if your project uses Angular 17, the CLI on your system can still be 20.x and its devkit remains 20.x.
+   * Only the packages installed inside your project (like `@angular/core`, `@angular/common`) will be 17.x.
+
+5. **Optional: Using an older CLI**
+
+   * If you want **full alignment**, you can install a local CLI 17 inside your project:
+
+     ```bash
+     npm install @angular/cli@17 --save-dev
+     ```
+   * Then use it via `npx ng new` to ensure all tooling matches Angular 17 exactly.
+
+---
+
+### **TL;DR**
+
+* **Global CLI** = controls scaffolding, DevKit packages (can be 20.x).
+* **Project Angular version** = can be 17.x if you specify `--version=17`.
+* DevKit 20.x is normal; it does **not force your project to be Angular 20**.
+
+ 
+
+
 
 # Why Angular 17?
 
