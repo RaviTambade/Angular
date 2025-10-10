@@ -9,8 +9,8 @@ You’re used to:
 * Handling state yourself (`variables + arrays + objects`)
 * Wiring events manually (`onclick`, `addEventListener`)
 
-✅ Works for small apps
-❌ Becomes **hard to maintain** for larger, enterprise-scale apps
+- ✅ Works for small apps
+- ❌ Becomes **hard to maintain** for larger, enterprise-scale apps
 
 
 ### Problems with Classic Approach
