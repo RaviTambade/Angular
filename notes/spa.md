@@ -2,8 +2,8 @@
 # Web Application  Architectures
 
 
-//lkdlkgd;lkg;ld
 
+//changes by Ravi Tambade
 <img src="/images/spa_mpa.png"/>
 
 
