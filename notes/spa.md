@@ -1,6 +1,9 @@
 
 # Web Application  Architectures
 
+
+
+//changes by Ravi Tambade
 <img src="/images/spa_mpa.png"/>
 
 
