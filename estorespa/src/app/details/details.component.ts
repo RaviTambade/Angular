@@ -1,14 +1,65 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ProductService } from '../product.service';
+import { Product } from '../product';
+import { CounterComponent } from '../counter/counter.component';
 @Component({
   selector: 'app-details',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule,CounterComponent],
   templateUrl: './details.component.html',
   styleUrl: './details.component.css'
 })
 export class DetailsComponent {
+
+currentProductId:any;
+  @Input () product: Product|undefined;
+
+  constructor(private router:Router,private route: ActivatedRoute, 
+              private productService: ProductService) {  }
+  
+  ngOnInit() { 
+    this.currentProductId=this.route.snapshot.paramMap.get("id");
+    this.product=this.productService.getProductById(this.currentProductId);
+  };
+ 
+  onUpdate(data:any){
+     if(this.product != undefined)
+        this.product.likes=data.count;
+      this.productService.updateProduct(this.product);
+   }
+   
+  addToCart():void {
+    let id=this.currentProductId;
+    console.log("Adding to cart product with id:", id);
+    this.router.navigate(['./addtocart/', id]);
+  }
+
+  goToUpdate(): void {
+   let  id=this.currentProductId;
+   console.log("Updating product with id:", id);
+   this.router.navigate(['./update/', id]);
+  }
+
+  goToDelete(id:number): void {
+    console.log("Deleting product with id:", id);
+    this.router.navigate(['./delete/', id]);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
    // ngIf
   isLoggedIn = true;
@@ -28,6 +79,6 @@ export class DetailsComponent {
   promoCode = '';
 
   // Dynamic styling
-  product = { name: 'Rose', price:9};
+  //product = { name: 'Rose', price:9};
 
 }
