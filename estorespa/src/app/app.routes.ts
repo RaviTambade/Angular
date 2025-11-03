@@ -14,12 +14,11 @@ import { DeleteComponent } from './delete/delete.component';
 import { PieChartComponent } from './bi/pie-chart/pie-chart.component';
 import { BarchartComponent } from './bi/barchart/barchart.component';
 
-
 export const childRoutes:Routes=[
 
     { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
     { path: 'bar', component: BarchartComponent },
-    { path: 'pie', component: PieChartComponent},
+    { path: 'pie', component: PieChartComponent}
 ];
     
 
@@ -41,19 +40,38 @@ export const childRoutes:Routes=[
 ];
 */
 
-export const routes: Routes=
-  [   {path:'', redirectTo:'home',pathMatch:"full"},
-      { path: 'home', component: HomeComponent },
-      { path: 'services', component: MentoringComponent},   
-      { path: 'about', component: AboutComponent},
-      { path:'contact', component: ContactComponent},
-      { path:'dashboard', component: DashboardComponent,children:childRoutes},
-      { path: 'protected',component: ProtectedComponent,canActivate: [LoggedInGuard]}, //secure Routing
-  
-      {path: 'lists', component: ListComponent},
-      {path: 'lists/:id', component: DetailsComponent},
 
-      {path: 'details/:id', component: DetailsComponent},///Paramterized Routing
-      {path: 'update/:id', component: UpdateComponent},
-      {path: 'delete/:id', component: DeleteComponent}
-    ];
+//Route mapping for Product Catalog
+//Route mapping for Shopping Cart
+//Route mapping for membership area
+//Route mapping for Analytics Dashboard
+
+
+//Minor pillars of OOPs
+//Typting
+//concurrency
+//modularity
+//persistence
+
+
+export const routes: Routes=
+  [    
+    {path:'', redirectTo:'home',pathMatch:"full"},
+    { path: 'home', component: HomeComponent },
+    { path: 'services', component: MentoringComponent},   
+    { path: 'about', component: AboutComponent},
+    { path:'contact', component: ContactComponent},
+    //Nested Routing
+    { path:'dashboard', component: DashboardComponent,children:childRoutes},
+    { path: 'protected',component: ProtectedComponent,canActivate: [LoggedInGuard]}, //secure Routing
+                                                                //injectable service
+
+    {path: 'lists', component: ListComponent},
+    {path: 'lists/:id', component: DetailsComponent},
+    {path: 'details/:id', component: DetailsComponent},///Paramterized Routing
+    {path: 'update/:id', component: UpdateComponent},
+    {path: 'delete/:id', component: DeleteComponent},
+
+    
+
+];

@@ -13,6 +13,7 @@ import { CounterComponent } from '../counter/counter.component';
 })
 export class ListComponent {
 products:any[]=[]
+   
 
   constructor(private svc:ProductService,
               private router: Router,
@@ -21,7 +22,6 @@ products:any[]=[]
   ngOnInit() {
     this.products = this.svc.getAllProducts();
   }
-
 
 
   goToProduct(id:number): void {

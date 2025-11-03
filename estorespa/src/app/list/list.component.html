@@ -21,7 +21,7 @@
         <div class="card-body">
         <h5 class="card-title">{{product.title}}</h5>
           <img [src]="product.imageurl" width="100" height="100" alt="{{product.title}}"/>
-         <p class="card-text">Likes: ₹{{product.likes}}</p>
+         <p class="card-text">Likes: {{product.likes}}</p>
           <button    (click)="goToProduct(product.id)">Details</button>
         </div>
       </div>

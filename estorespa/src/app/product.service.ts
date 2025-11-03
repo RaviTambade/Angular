@@ -24,6 +24,7 @@ export class ProductService {
     //return {id:6,title:'Lily',description:"wedding Flower",unitPrice:10, quantity:2300,likes:76,imageUrl:"./assets/images/gerbera.jpg"};
    return this.list.find((p:any)=>{ return p.id ==id});
   }
+  
   updateProduct(prod:any):void
   {
     let index=this.list.findIndex((p:any)=> p.id==prod.id);
