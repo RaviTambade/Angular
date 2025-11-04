@@ -116,9 +116,3 @@ The Angular Router provides the routerLink directive to create navigation links.
 <a [routerLink]="'/contacts'">Contacts</a>
 ```
 
-
-
-
-
-
-

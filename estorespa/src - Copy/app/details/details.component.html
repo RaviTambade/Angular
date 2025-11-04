@@ -1,0 +1,117 @@
+<h2>Details</h2>
+<hr/>
+<div class="card-body">
+        <h5 class="card-title">{{product?.title}}</h5>
+          <img [src]="product?.imageurl" width="100" height="100" alt="{{product?.title}}"/>
+         <p class="card-text">Likes: ₹{{product?.title}}</p>
+         <p class="card-text">Likes: ₹{{product?.description}}</p>
+         <p class="card-text">Likes: ₹{{product?.price}}</p>
+         <p class="card-text">Likes: ₹{{product?.likes}}</p>
+         <app-counter [count]="product?.likes"  (update)="onUpdate($event)"> </app-counter>
+</div>
+ 
+<button  (click)="addToCart()">add to cart</button>
+<button  (click)="goToUpdate()">update</button>
+<button  (click)="goToDelete(2)">remove</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<h3>*ngIf Example</h3>
+<div *ngIf="isLoggedIn; else guest">
+  <p>Welcome back, {{ userName }}!</p>
+</div>
+<ng-template #guest>
+  <p>Please login to access exclusive deals.</p>
+</ng-template>
+
+<hr />
+<h3>*ngFor Example</h3>
+<ul>
+  <li *ngFor="let product of products; index as i">
+    {{ i + 1 }}. {{ product.name }} - ₹{{ product.price }}
+  </li>
+</ul>
+
+
+<hr />
+
+<h3>*ngSwitch Example</h3>
+<div [ngSwitch]="status">
+  <p *ngSwitchCase="'instock'">Available Now</p>
+  <p *ngSwitchCase="'outofstock'">Out of Stock</p>
+  <p *ngSwitchCase="'comingsoon'">Coming Soon</p>
+  <p *ngSwitchDefault>Unknown Status</p>
+</div>
+
+<hr />
+
+<h3>[ngClass] Example</h3>
+<p
+  [ngClass]="{
+    expensive: product.price > 10,
+    affordable: product.price <= 10
+  }"
+>
+  {{ product.name }} - ₹{{ product.price }}
+</p>
+
+<hr />
+<h3>[ngStyle] Example</h3>
+<p [ngStyle]="{ color: product.price > 10 ? 'red' : 'green' }">
+  {{ product.name }} - ₹{{ product.price }}
+</p>
+
+<hr />
+<h3>[(ngModel)] Example</h3>
+<input
+  type="text"
+  [(ngModel)]="promoCode"
+  placeholder="Enter promo code"
+/>
+<p>You entered: {{ promoCode }}</p>
+
+<hr />
+
+<h3>Template Syntax Examples</h3>
+
+@if (isLoggedIn) {
+  <p>Welcome, {{ userName }}!</p>
+} @else {
+  <p>Please login.</p>
+}
+
+@for (item of products; track item.name) {
+  <p>{{ item.name }} - ₹{{ item.price }}</p>
+}
+
+@switch (status) {
+  @case ('instock') {
+    <p>Available Now</p>
+  }
+  @case ('outofstock') {
+    <p>Out of Stock</p>
+  }
+  @case ('comingsoon') {
+    <p>Coming Soon</p>
+  }
+  @default {
+    <p>Unknown Status</p>
+  }
+}
+
+-->

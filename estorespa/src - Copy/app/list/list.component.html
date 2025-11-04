@@ -1,0 +1,31 @@
+<!-- <ul>
+ <li> Gerbera <a routerLink="details/1">details</a> | <a routerLink="update/1">update</a> | <a routerLink="delete/1">delete</a></li>
+ <li> Lotus <a routerLink="details/2">details</a> | <a routerLink="update/2">update</a> | <a routerLink="delete/2">delete</a></li>
+ <li> Jasmine <a routerLink="details/3">details</a> | <a routerLink="update/3">update</a> | <a routerLink="delete/3">delete</a></li>
+
+</ul>
+
+ 
+<router-outlet></router-outlet>  -->
+
+<h2>Product Catalog</h2>
+<a [routerLink]= "['/create']">New Product</a>
+<br/>
+
+
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let product of products">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+        <h5 class="card-title">{{product.title}}</h5>
+          <img [src]="product.imageurl" width="100" height="100" alt="{{product.title}}"/>
+         <p class="card-text">Likes: {{product.likes}}</p>
+          <button    (click)="goToProduct(product.id)">Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

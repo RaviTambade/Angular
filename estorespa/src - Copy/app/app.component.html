@@ -1,0 +1,23 @@
+<h2>Transflower EStore</h2>
+<hr/>
+
+<!-- statically linked in sidebar -->
+<sign-in></sign-in>
+<hr/>
+<!-- directive or pipe-->
+<a routerLink="home">Home</a> | 
+<a routerLink="services">Services</a> |
+<a *ngIf="loggedInStatus" routerLink="about">About us</a>| 
+<a routerLink="contact">Contact</a> |
+<a routerLink="dashboard">Dashboard</a> |
+<a routerLink="protected">Protected</a> |
+<a [routerLink]="['/lists']">Products</a>
+
+<hr/>
+
+
+<div >
+  <!-- Routed views go here -->
+   <!-- placeholder that Angular dynamically fills based on the current router state. --> 
+  <router-outlet></router-outlet>
+</div> 
