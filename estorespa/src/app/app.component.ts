@@ -7,11 +7,12 @@ import { RouterLink } from '@angular/router';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { CommonModule } from '@angular/common';
 import { ObservableModule } from './observables/observable.module';
+import { GraphicsModule } from './graphics/graphics.module';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink, SignInComponent,ObservableModule],
+  imports: [CommonModule, RouterOutlet, RouterLink, SignInComponent,ObservableModule,GraphicsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
