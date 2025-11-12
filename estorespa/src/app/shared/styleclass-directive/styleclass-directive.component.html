@@ -1,0 +1,24 @@
+<h1>Class Binding</h1>
+
+<div [ngClass]="['bold-text', 'red']">Transflower</div>
+
+<div [className]="'ocean'">css class using property syntax</div>
+
+<div [ngClass]="{'small-text': false, 'red': true}">object/mapclasses</div>
+<br/>
+
+<div [ngClass]="{bordered: false}">This is never bordered</div>
+<div [ngClass]="{bordered: true}">This is always bordered</div>
+<br/>
+
+
+<span [ngClass]="displayText">toggled with ngClass</span> 
+<button (click)="toggle()">Toggle</button>
+<br/>
+
+<div>
+    <ul *ngFor="let person of people">
+       <li [ngStyle]="{'color':getColor(person.country)}"> {{ person.name }} ({{ person.country }}) 
+       </li>
+     </ul>
+</div>

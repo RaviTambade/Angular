@@ -1,0 +1,70 @@
+<div class="container mt-4">
+  <h2 class="mb-3 text-center">🛒 My Shopping Cart</h2>
+  <div  class="card shadow-sm">
+    <div class="card-body p-0">
+      <table class="table table-striped align-middle mb-0">
+        <thead class="table-dark text-center">
+          <tr>
+            <th>Image</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-center">
+              <img src="/assets/images/rose.jpg" width="60" height="60" class="rounded">
+            </td>
+            <td>rose</td>
+            <td class="text-end">₹ 15</td>
+            <td class="text-center">
+              <input type="number" class="form-control text-center mx-auto"
+                     style="width: 80px;"
+                     min="1" value="2"/>
+            </td>
+            <td class="text-end">₹30</td>
+            <td class="text-center">
+              <button class="btn btn-sm btn-outline-danger">
+                <i class="bi bi-trash"></i> Remove
+              </button>
+            </td>
+          </tr>
+
+           <tr>
+            <td class="text-center">
+              <img src="/assets/images/lotus.jpg" width="60" height="60" class="rounded">
+            </td>
+            <td>lotus</td>
+            <td class="text-end">₹ 30</td>
+            <td class="text-center">
+              <input type="number" class="form-control text-center mx-auto"
+                     style="width: 80px;"
+                     min="1" value="4"/>
+            </td>
+            <td class="text-end">₹120</td>
+            <td class="text-center">
+              <button class="btn btn-sm btn-outline-danger">
+                <i class="bi bi-trash"></i> Remove
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card-footer d-flex justify-content-between align-items-center">
+      <h5 class="mb-0">Total: <span class="text-success fw-bold">₹150</span></h5>
+      <div>
+        <button class="btn btn-outline-danger me-2" >
+          <i class="bi bi-x-circle"></i> Clear Cart
+        </button>
+        <button class="btn btn-success">
+          <i class="bi bi-credit-card"></i> Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

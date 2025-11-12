@@ -1,0 +1,17 @@
+.red { color: red;   font-size:25px ;
+       font-family: Georgia, 'Times New Roman', Times, serif; }
+
+.ocean { color:rgb(67, 0, 139); font-size:30px; font-style: italic;}
+
+.bordered {
+  border: 2px dashed #ed2121;
+  background-color: #7ee1e1; 
+  font-style: italic; 
+}
+
+.bold-text { font-weight:bold; text-decoration: underline; }
+
+.show-class {visibility: visible;}
+.hide-class {visibility: hidden;}
+.italic-text {font-style: italic;}
+.small-text {font-size: 5px;}

@@ -1,0 +1,8 @@
+<p>Todays Fresh Flowers for sale</p>
+<hr/>
+
+<div  *ngFor="let flower of flowers| sellable ">
+    <p> {{flower.id}} || {{flower.title}} || {{flower.unitprice}}</p>
+</div>
+
+<button (click)="onAdd()">Add</button>

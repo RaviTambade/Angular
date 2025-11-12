@@ -1,18 +1,20 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
- 
-
-import { RouterModule } from '@angular/router';
-import { RouterLink } from '@angular/router';
-import { SignInComponent } from './sign-in/sign-in.component';
+ import { RouterModule } from '@angular/router';
+import { SignInComponent } from './membership/sign-in/sign-in.component';
 import { CommonModule } from '@angular/common';
 import { ObservableModule } from './observables/observable.module';
 import { GraphicsModule } from './graphics/graphics.module';
-
+import { CatalogModule } from './catalog/catalog.module';
+import { SharedModule } from './shared/sharedmodule';
+import { Customodule } from './custom/customodule';
+import { MasterComponent } from './observables/communication/master/master.component';
+import { SalveComponent } from './shared/effects/peertopeer/salve/salve.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink, SignInComponent,ObservableModule,GraphicsModule],
+  imports: [CommonModule,RouterModule,CatalogModule, SignInComponent,
+            SharedModule, Customodule, ObservableModule,GraphicsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

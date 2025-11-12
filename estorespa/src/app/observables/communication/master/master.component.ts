@@ -3,6 +3,7 @@ import { MessageService } from '../../messageservice';
 
 @Component({
   selector: 'app-master',
+
   templateUrl: './master.component.html',
   styleUrls: ['./master.component.css']
 })
