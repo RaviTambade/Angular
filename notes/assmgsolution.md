@@ -1,4 +1,4 @@
-## 👨‍🏫 **Building ProductHighlightDirective**
+## 👨‍🏫 **Building Product Highlight  Directive**
 
 ### 🌱 Scene Setup: Classroom Discussion
 
