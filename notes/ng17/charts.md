@@ -1,30 +1,22 @@
 
-# **Working Solution for Angular 17**
-
-You have **two correct choices**:
-
-
-
-# ✅ OPTION 1 — Use Google Charts **directly** (NO third-party library)
+# **Using Charts in Angular**
 
 **This works perfectly with Angular 17**
 (Safest & Recommended in Angular 17/18/19/20 projects)
 
-
-
-# 🚀 Step 1: Install Google Charts loader
+## 🚀 Step 1: Install Google Charts loader
 
 ```bash
 npm install google-charts
 ```
 
-# 🚀 Step 2: Create a Google Chart component
+## 🚀 Step 2: Create a Google Chart component
 
 ```bash
 ng g component google-charts --standalone
 ```
 
-# 🚀 Step 3: Use Google Charts manually
+## 🚀 Step 3: Use Google Charts manually
 
 ### **google-charts.component.ts**
 
@@ -87,7 +79,7 @@ export class GoogleChartsComponent implements AfterViewInit {
 }
 ```
 
-# 🚀 Step 4: HTML Template
+## 🚀 Step 4: HTML Template
 
 ### **google-charts.component.html**
 
@@ -104,7 +96,7 @@ export class GoogleChartsComponent implements AfterViewInit {
 ✔ Works in Standalone + Zoneless
 ✔ No dependency on outdated libraries
 
-# ✅ OPTION 2 — Use a modern chart library (Best for industry)
+## OPTION 2 — Use a modern chart library (Best for industry)
 
 If Google Charts is not mandatory, choose:
 
