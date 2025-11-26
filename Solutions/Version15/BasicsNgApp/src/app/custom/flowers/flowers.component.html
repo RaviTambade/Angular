@@ -1,6 +1,12 @@
 <p>Transflowers</p>
 <hr/>
 
+
+<div [hidden]="true">
+    <h3>Flower List</h3>
+
+</div>
+
 <div  *ngFor="let flower of flowers ">
     <p> {{flower.id}} || {{flower.title}} || {{flower.unitprice}}</p>
 </div>

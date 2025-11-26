@@ -12,7 +12,11 @@ import { Directive, ElementRef, Input, Renderer2 } from '@angular/core';
 
 @Directive({ selector: '[myHidden]' })
 export class HiddenDirective {
+
+
     constructor(public el: ElementRef, public renderer: Renderer2) {}
+    
+    
     @Input() myHidden: boolean|undefined;
     ngOnInit(){
         if(this.myHidden) {
