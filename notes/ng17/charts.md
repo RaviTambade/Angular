@@ -41,7 +41,7 @@ Using Angular's component architecture, you can create:
 Angular supports all modern chart libraries and provides hooks (ngOnInit, ngAfterViewInit) to update charts smoothly.
 
 
-# 📊 **Common Types of Charts You Can Build**
+## 📊 **Common Types of Charts You Can Build**
 
 * **Bar Chart**: Compare categories (e.g., monthly sales)
 * **Line Chart**: Show trends over time (e.g., visitors per day)
@@ -53,7 +53,7 @@ Angular supports all modern chart libraries and provides hooks (ngOnInit, ngAfte
 * **Gauge Chart**: Performance indicators
 * **Combo Charts**: Mix of bar + line
 
-# 🔧 **Where Charts Fit in an Angular App**
+## 🔧 **Where Charts Fit in an Angular App**
 
 Charts are usually used in:
 
@@ -77,8 +77,6 @@ charts/
 
 Each component focuses on a specific visualization.
 
-# 🧑‍🏫 Mentor Note – “Why Charts Matter”
-
 When you build an Angular application, you're not just writing code —
 you're telling a story.
 
@@ -88,8 +86,6 @@ A well-designed chart can explain in 3 seconds what a table takes 30 seconds to 
 Think of charts as the **eyes of your application**, helping the user see data clearly.
 
  
-
-
 **This works perfectly with Angular 17**
 (Safest & Recommended in Angular 17/18/19/20 projects)
 
