@@ -1,4 +1,4 @@
-# 🌟 ** Using Charts in Angular**
+# Using Charts in Angular
 
 In any modern web application, **data visualization** plays a key role. Whether you are building dashboards, analytics panels, admin reports, or monitoring tools — users understand data faster when it is shown visually rather than as plain numbers.
 
