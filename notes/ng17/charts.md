@@ -18,20 +18,16 @@ Each chart library has its own strengths, but the idea remains the same:
 
 
 
-### ✔ Clear visual storytelling
-
+- ✔ Clear visual storytelling
 Charts convert raw data into trends, comparisons, and patterns that users can understand instantly.
 
-### ✔ Perfect for dashboards
-
+- ✔ Perfect for dashboards
 Sales reports, student performance, product analytics, system monitoring — all look better with charts.
 
-### ✔ Works with APIs
-
+- ✔ Works with APIs
 Angular services can fetch live data from REST APIs and update charts dynamically.
 
-### ✔ Reusable components
-
+- ✔ Reusable components
 Using Angular's component architecture, you can create:
 
 * `BarChartComponent`
