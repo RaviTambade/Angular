@@ -176,10 +176,10 @@ export class GoogleChartsComponent implements AfterViewInit {
 <div #lineChart style="width: 100%; height: 300px;"></div>
 ```
 
-✔ 100% compatible with Angular 17
-✔ No NgModule needed
-✔ Works in Standalone + Zoneless
-✔ No dependency on outdated libraries
+- ✔ 100% compatible with Angular 17
+- ✔ No NgModule needed
+- ✔ Works in Standalone + Zoneless
+- ✔ No dependency on outdated libraries
 
 ## OPTION 2 — Use a modern chart library (Best for industry)
 
