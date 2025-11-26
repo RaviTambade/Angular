@@ -176,6 +176,13 @@ export class GoogleChartsComponent implements AfterViewInit {
 <div #lineChart style="width: 100%; height: 300px;"></div>
 ```
 
+## 🚀 Step 5: oad Google Charts script in index.html
+
+```html
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+```
+### **google-charts.component.html**
+
 - ✔ 100% compatible with Angular 17
 - ✔ No NgModule needed
 - ✔ Works in Standalone + Zoneless
