@@ -1,8 +1,4 @@
-Perfect — let’s build a **complete Angular 17 + NgRx application** in the **Product domain**, with a **mentor storytelling style** so your students can understand it like a real project.
-
----
-
-# 🧑‍🏫 Mentor Story — “The Product Store”
+# “The Product Store”
 
 Imagine we’re setting up a small product store.
 
@@ -16,18 +12,14 @@ Imagine we’re setting up a small product store.
 
 Let’s implement this step-by-step.
 
----
-
-# ✅ 1. Create Angular App (with Zone.js)
+### ✅ 1. Create Angular App (with Zone.js)
 
 ```
 ng new product-app
 # Choose: No (for zoneless) → DO NOT enable zoneless mode
 ```
 
----
-
-# ✅ 2. Add NgRx
+### ✅ 2. Add NgRx
 
 ```
 ng add @ngrx/store
@@ -35,9 +27,7 @@ ng add @ngrx/effects
 ng add @ngrx/store-devtools
 ```
 
----
-
-# 🗂 Directory Structure (Recommended)
+### 🗂 Directory Structure (Recommended)
 
 ```
 src/app/
@@ -51,9 +41,7 @@ src/app/
       + product.component.ts
 ```
 
----
-
-# 🧱 3. Create Product Model
+### 🧱 3. Create Product Model
 
 `src/app/products/product.model.ts`
 
@@ -65,9 +53,7 @@ export interface Product {
 }
 ```
 
----
-
-# 🚀 4. Create Product Actions
+### 🚀 4. Create Product Actions
 
 `product.actions.ts`
 
@@ -91,9 +77,7 @@ export const addProduct = createAction(
 );
 ```
 
----
-
-# 🧠 5. Create Reducer (Warehouse Update Logic)
+### 🧠 5. Create Reducer (Warehouse Update Logic)
 
 `product.reducer.ts`
 
@@ -123,9 +107,7 @@ export const productReducer = createReducer(
 );
 ```
 
----
-
-# 🔍 6. Create Selectors (Warehouse Search Helpers)
+### 🔍 6. Create Selectors (Warehouse Search Helpers)
 
 `product.selectors.ts`
 
@@ -141,9 +123,7 @@ export const selectAllProducts = createSelector(
 );
 ```
 
----
-
-# 🌐 7. Create Product Service (REST API)
+### 🌐 7. Create Product Service (REST API)
 
 `product.service.ts`
 
@@ -173,9 +153,7 @@ Add missing import:
 import { map } from 'rxjs/operators';
 ```
 
----
-
-# 🛵 8. Create Effects (Our Delivery Boy)
+### 🛵 8. Create Effects (Our Delivery Boy)
 
 `product.effects.ts`
 
@@ -208,9 +186,7 @@ export class ProductEffects {
 }
 ```
 
----
-
-# 🏛 9. Register Reducer + Effects in App
+### 🏛 9. Register Reducer + Effects in App
 
 In `app.config.ts`:
 
@@ -230,10 +206,7 @@ export const appConfig: ApplicationConfig = {
   ]
 };
 ```
-
----
-
-# 🖥 10. UI Component (Call Actions + Select State)
+### 🖥 10. UI Component (Call Actions + Select State)
 
 `product.component.ts`
 
@@ -271,9 +244,7 @@ export class ProductComponent {
 }
 ```
 
----
-
-# 🎉 11. Add Component to main.ts
+### 🎉 11. Add Component to main.ts
 
 `main.ts`
 
@@ -286,16 +257,4 @@ import { appConfig } from './app/app.config';
 bootstrapApplication(ProductComponent, appConfig);
 ```
 
----
-
-# ✅ Your Angular 17 + NgRx Product App is READY 🎉
-
-If you want NEXT:
-
-✅ Add product details page
-✅ Add create/update/delete product
-✅ Add router-store integration
-✅ Add entity adapter
-✅ Real backend JSON server setup
-
-Just tell me!
+### Your Angular 17 + NgRx Product App is READY
