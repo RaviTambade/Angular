@@ -99,7 +99,7 @@ Subscriber: 0
 Subscriber: 1
 Subscriber: 2
 ```
-
+  
 
 map
 Finally, I want to add another operator called map, this takes as input the output stream from take, convert each value to a date and pushes that out onto a third stream like so:
