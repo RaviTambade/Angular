@@ -15,7 +15,6 @@ D. `/dist`
 
 **Answer: B**
 
----
 
 ### **2. Which of the following files is responsible for bootstrapping the Angular application?**
 
@@ -26,7 +25,6 @@ D. `polyfills.ts`
 
 **Answer: A**
 
----
 
 ### **3. Which file contains the root Angular component?**
 
@@ -37,8 +35,6 @@ D. `angular.json`
 
 **Answer: B**
 
----
-
 ### **4. What is the purpose of the `angular.json` file?**
 
 A. To store environment variables
@@ -47,8 +43,6 @@ C. To define components
 D. To list TypeScript dependencies
 
 **Answer: B**
-
----
 
 ### **5. Which folder contains environment-specific configuration files?**
 
@@ -59,7 +53,6 @@ D. `/src/config`
 
 **Answer: C**
 
----
 
 ### **6. Which file defines global styles for the entire Angular project?**
 
@@ -70,7 +63,6 @@ D. `main.css`
 
 **Answer: A**
 
----
 
 ### **7. What is the purpose of the `/assets` folder?**
 
@@ -81,7 +73,6 @@ D. To store compiled output
 
 **Answer: A**
 
----
 
 ### **8. Which folder is generated during `ng build` and contains the production-ready output?**
 
@@ -92,7 +83,6 @@ D. `/production`
 
 **Answer: B**
 
----
 
 ### **9. Which file contains TypeScript compiler options?**
 
@@ -103,7 +93,7 @@ D. `package.json`
 
 **Answer: B**
 
----
+
 
 ### **10. The `polyfills.ts` file is used for:**
 
@@ -114,7 +104,6 @@ D. Running unit tests
 
 **Answer: B**
 
----
 
 ### **11. Which JSON file holds npm dependencies installed via Angular CLI?**
 
@@ -125,7 +114,6 @@ D. `tsconfig.json`
 
 **Answer: B**
 
----
 
 ### **12. The default testing setup created by `ng new` places test files with the extension:**
 
@@ -136,7 +124,6 @@ D. `.unit.ts`
 
 **Answer: C**
 
----
 
 ### **13. What is the role of `index.html` in an Angular project?**
 
@@ -147,7 +134,7 @@ D. Defines module metadata
 
 **Answer: B**
 
----
+
 
 ### **14. Which folder contains root-level modules and components?**
 
@@ -158,7 +145,7 @@ D. `/src/root`
 
 **Answer: A**
 
----
+
 
 ### **15. Which file initializes the Angular platform required for browsers?**
 
@@ -169,7 +156,7 @@ D. `app.component.ts`
 
 **Answer: B**
 
----
+
 
 ### **16. What is the purpose of the `app.module.ts` file?**
 
@@ -180,7 +167,7 @@ D. To compile TypeScript
 
 **Answer: B**
 
----
+
 
 ### **17. Where does Angular CLI create configuration for linting?**
 
@@ -191,7 +178,7 @@ D. No linting config generated
 
 **Answer: C**
 
----
+
 
 ### **18. The default HTML template for the root component is found in:**
 
@@ -202,7 +189,7 @@ D. `template.html`
 
 **Answer: B**
 
----
+
 
 ### **19. The command `ng new` automatically creates a Git repository when using:**
 
@@ -213,7 +200,7 @@ D. `--repo`
 
 **Answer: C**
 
----
+
 
 ### **20. Which file controls project-level build and serve configurations like assets, styles, and output paths?**
 
@@ -225,10 +212,7 @@ D. `environment.ts`
 **Answer: C**
 
  
-
 # ✅ **20 MCQ — Angular Components & Modules**
-
----
 
 ### **1. Which decorator is used to define an Angular component?**
 
@@ -239,7 +223,7 @@ D. `@Directive`
 
 **Answer: C**
 
----
+
 
 ### **2. Which file typically contains the metadata for declaring a component?**
 
@@ -250,7 +234,6 @@ D. `angular.json`
 
 **Answer: B**
 
----
 
 ### **3. The `selector` property of a component determines:**
 
@@ -261,7 +244,7 @@ D. The build configuration
 
 **Answer: B**
 
----
+
 
 ### **4. What does the `templateUrl` property specify?**
 
@@ -272,7 +255,6 @@ D. The location of component CSS
 
 **Answer: B**
 
----
 
 ### **5. Which Angular CLI command creates a new component?**
 
@@ -283,7 +265,6 @@ D. `ng gen comp`
 
 **Answer: C**
 
----
 
 ### **6. In Angular, a module is defined using which decorator?**
 
@@ -294,7 +275,6 @@ D. `@Component`
 
 **Answer: C**
 
----
 
 ### **7. Which module is mandatory for every Angular application?**
 
@@ -305,7 +285,6 @@ D. `HttpClientModule`
 
 **Answer: C**
 
----
 
 ### **8. Which property inside `@NgModule` is used to declare components, directives, and pipes?**
 
@@ -316,7 +295,6 @@ D. `exports`
 
 **Answer: C**
 
----
 
 ### **9. The `bootstrap` array in `@NgModule` is used to:**
 
@@ -327,7 +305,7 @@ D. Build project dependencies
 
 **Answer: B**
 
----
+
 
 ### **10. Which module is commonly used when building features reusable across apps?**
 
@@ -338,7 +316,6 @@ D. `AppModule`
 
 **Answer: B**
 
----
 
 ### **11. What is the role of `providers` in an Angular module?**
 
@@ -349,7 +326,6 @@ D. Configure directives
 
 **Answer: B**
 
----
 
 ### **12. A component must belong to exactly one:**
 
@@ -360,7 +336,7 @@ D. HTML template
 
 **Answer: C**
 
----
+
 
 ### **13. Which file decides which module to load first in an Angular app?**
 
@@ -371,7 +347,7 @@ D. `app.module.ts`
 
 **Answer: A**
 
----
+
 
 ### **14. What is the purpose of `CommonModule`?**
 
@@ -676,7 +652,7 @@ D. `@NgModule`
 
 **Answer: B**
 
----
+
 
 ### **3. What does `providedIn: 'root'` mean in a service?**
 
@@ -687,7 +663,6 @@ D. The service is not injectable
 
 **Answer: B**
 
----
 
 ### **4. How do you inject a service into a component?**
 
@@ -698,7 +673,6 @@ D. Using `ngOnInit()`
 
 **Answer: B**
 
----
 
 ### **5. What is the scope of a service provided in a lazy-loaded module?**
 
@@ -709,7 +683,6 @@ D. Only available in root module
 
 **Answer: B**
 
----
 
 ### **6. What happens if a service is not provided in any module?**
 
@@ -720,7 +693,6 @@ D. Component ignores the service
 
 **Answer: B**
 
----
 
 ### **7. Which array in `@NgModule` is used to register services?**
 
@@ -731,7 +703,7 @@ D. `exports`
 
 **Answer: B**
 
----
+
 
 ### **8. What is the difference between `providedIn: 'root'` and `providers: [Service]`?**
 
@@ -742,7 +714,6 @@ D. Only `providers` is recommended
 
 **Answer: B**
 
----
 
 ### **9. What is hierarchical injection in Angular?**
 
@@ -753,7 +724,6 @@ D. Services injected via routing
 
 **Answer: A**
 
----
 
 ### **10. Which of these is true about singleton services?**
 
@@ -764,7 +734,6 @@ D. Cannot inject into other services
 
 **Answer: A**
 
----
 
 ### **11. How can a service inject another service?**
 
@@ -775,7 +744,6 @@ D. Using `providers`
 
 **Answer: B**
 
----
 
 ### **12. Which Angular feature automatically resolves service dependencies?**
 
@@ -786,7 +754,6 @@ D. Router
 
 **Answer: B**
 
----
 
 ### **13. What is the role of `Injector` in Angular?**
 
@@ -797,7 +764,6 @@ D. Configures HTTP requests
 
 **Answer: B**
 
----
 
 ### **14. If you want multiple instances of a service per component, where do you provide it?**
 
@@ -819,7 +785,7 @@ D. `@Output`
 
 **Answer: B**
 
----
+
 
 ### **16. What is the default scope of a service provided in `@Injectable({ providedIn: 'root' })`?**
 
@@ -830,7 +796,6 @@ D. Lazy module only
 
 **Answer: B**
 
----
 
 ### **17. Can services inject primitive values (like string, number)?**
 
@@ -841,7 +806,7 @@ D. Only in components
 
 **Answer: A**
 
----
+
 
 ### **18. Which method allows you to override a service in a child component?**
 
@@ -852,7 +817,7 @@ D. Using `@Output()`
 
 **Answer: B**
 
----
+
 
 ### **19. What is the purpose of `multi: true` in provider configuration?**
 
@@ -863,7 +828,7 @@ D. Provides singleton behavior
 
 **Answer: A**
 
----
+
 
 ### **20. Which of these is the best practice for Angular services?**
 
