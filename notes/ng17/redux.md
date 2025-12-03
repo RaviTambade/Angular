@@ -165,12 +165,12 @@ Action → Effect → API → Success Action → Reducer → Store
 
 # 🧠 **Why Redux Is Powerful in Angular 17**
 
-✔ Predictable state
-✔ Debuggable (Redux DevTools)
-✔ Testable
-✔ Scalable
-✔ One place to track changes
-✔ No more “Who changed the data?” confusion
+- ✔ Predictable state
+- ✔ Debuggable (Redux DevTools)
+- ✔ Testable
+- ✔ Scalable
+- ✔ One place to track changes
+- ✔ No more “Who changed the data?” confusion
 
 
 # 🚀 **Small Working Example (Angular 17)**
