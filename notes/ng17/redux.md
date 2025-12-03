@@ -362,9 +362,9 @@ Below is a **complete, small Angular 17 + NgRx Redux-style project** that you ca
 Simple, clean, minimal — but enough to understand the full Redux flow (Action → Reducer → Selector → Effect → API → Store).
 
 
-# 🚦 **Project Name:**
+## 🚦 **Project Name:**
 
-## **Product Dashboard (Angular 17 + NgRx)**
+### **Product Dashboard (Angular 17 + NgRx)**
 
 A small app that:
 
@@ -375,7 +375,7 @@ A small app that:
 Perfect for students to learn Redux pattern end-to-end.
 
 
-# 🏗 Project Structure
+## 🏗 Project Structure
 
 ```
 src/
@@ -391,7 +391,7 @@ src/
      └─ app.component.ts
 ```
 
-# ⚙️ Step 1 — Install NgRx packages
+## ⚙️ Step 1 — Install NgRx packages
 
 ```bash
 ng new angular-redux-demo
@@ -404,7 +404,7 @@ ng add @ngrx/store-devtools
 
 ---
 
-# 📁 Step 2 — Create Product Model
+## 📁 Step 2 — Create Product Model
 
 `product.model.ts`
 
@@ -416,7 +416,7 @@ export interface Product {
 }
 ```
 
-# 📁 Step 3 — Create Actions
+## 📁 Step 3 — Create Actions
 
 `product.actions.ts`
 
@@ -437,7 +437,7 @@ export const loadProductsFailure = createAction(
 );
 ```
 
-# 📁 Step 4 — Create Initial State & Reducer
+## 📁 Step 4 — Create Initial State & Reducer
 
 `product.reducer.ts`
 
@@ -480,7 +480,7 @@ export const productReducer = createReducer(
 );
 ```
 
-# 📁 Step 5 — Create Selectors
+## 📁 Step 5 — Create Selectors
 
 `product.selectors.ts`
 
@@ -507,7 +507,7 @@ export const selectError = createSelector(
 );
 ```
 
-# 📁 Step 6 — Product Service (Fake API)
+## 📁 Step 6 — Product Service (Fake API)
 
 `product.service.ts`
 
@@ -530,7 +530,7 @@ export class ProductService {
 }
 ```
 
-# 📁 Step 7 — Create Effects
+## 📁 Step 7 — Create Effects
 
 `product.effects.ts`
 
@@ -562,7 +562,7 @@ export class ProductEffects {
 }
 ```
 
-# 📁 Step 8 — Register Store + Effects
+## 📁 Step 8 — Register Store + Effects
 
 Modify `main.ts` or inside `bootstrapApplication`:
 
@@ -582,7 +582,7 @@ bootstrapApplication(AppComponent, {
 });
 ```
 
-# 📁 Step 9 — Create Product List Component
+## 📁 Step 9 — Create Product List Component
 
 `product-list.component.ts`
 
@@ -624,7 +624,7 @@ export class ProductListComponent {
 }
 ```
 
-# 📁 Step 10 — Show in App Component
+## 📁 Step 10 — Show in App Component
 
 `app.component.ts`
 
@@ -653,20 +653,12 @@ When students click **Load Products**:
 
 
 
-Alright, let’s explain **WHEN to use Redux and WHEN NOT to use Redux in Angular**
-but in a **mentor storytelling style** — the way you teach in class, full of real-life comparisons.
-
----
-
-# 🎩 **Mentor Story:
-
-“Redux is like running a big company vs. a small shop.”**
+## “Redux is like running a big company vs. a small shop.”
 
 Imagine you and your students enter a classroom, and you start the story:
 
----
 
-# 🧵 **Part 1 — The Small Shop Story (Why NOT to use Redux)**
+### 🧵 **Part 1 — The Small Shop Story (Why NOT to use Redux)**
 
 “Imagine you run a small chai stall near your college.
 
@@ -699,7 +691,7 @@ This is what I tell my students:
 > **Redux is not needed**.
 > A simple service or component state is enough."
 
-# 🏢 **Part 2 — The Big Company Story (Why to use Redux)**
+### 🏢 **Part 2 — The Big Company Story (Why to use Redux)**
 
 Now imagine the same chai stall has grown into **Chai Empire Pvt. Ltd.**
 You now have:
@@ -750,7 +742,7 @@ This is perfect for **enterprise Angular applications** where:
 * State must be auditable
 * API flows are complex
 
-# 🎭 **Part 3 — The Classroom Punchline**
+### 🎭 **Part 3 — The Classroom Punchline**
 
 You tell students:
 
@@ -765,9 +757,9 @@ And then:
 Everyone laughs —
 but the message hits deep.
 
-# 🧠 **The Mentor Rule**
+### 🧠 **The Mentor Rule**
 
-### 🟢 Use Redux when:
+#### 🟢 Use Redux when:
 
 * Many components need the same data
 * State must be consistent
@@ -775,14 +767,12 @@ but the message hits deep.
 * Debugging and logging are important
 * Enterprise-level architecture is required
 
-### 🔴 Don’t use Redux when:
+#### 🔴 Don’t use Redux when:
 
 * App is small
 * Only one component uses the data
 * Simple BehaviorSubject in a service works
 * No complex async flows
-
-# 🎓 **Final Mentor Message**
 
 “Students, always remember —
 
@@ -794,10 +784,6 @@ Avoid it when the problem is small enough to solve with simple tools.
 An architect chooses the right tool,
 not the heaviest tool.”
 
-
-
-# 🎯 **Redux (NgRx) in Angular — When to Use & When NOT to Use**
-
 Think of it like this:
 
 > Redux is powerful, but it’s heavy.
@@ -806,13 +792,11 @@ Think of it like this:
 
 Let’s break it down like a mentor teaching new developers.
 
-
-
-# 🟢 **When to Use Redux (NgRx) in Angular**
+### 🟢 **When to Use Redux (NgRx) in Angular**
 
 Use Redux when **your application behaves like a big organization with many departments**, and data needs to stay **consistent, shareable, trackable, and predictable**.
 
-## ✅ **1. You have complex global state**
+#### ✅ **1. You have complex global state**
 
 Examples:
 
@@ -827,7 +811,7 @@ If multiple components need the same data → Redux is the right tool.
 
 
 
-## ✅ **2. You need predictable updates (audit & debugging)**
+#### ✅ **2. You need predictable updates (audit & debugging)**
 
 Redux DevTools allow:
 
@@ -838,7 +822,7 @@ Redux DevTools allow:
 
 
 
-## ✅ **3. A lot of async operations (API calls) happening in sequence**
+#### ✅ **3. A lot of async operations (API calls) happening in sequence**
 
 Complex flows like:
 
@@ -848,7 +832,7 @@ Load User → Load Orders → Load Payments → Load Recommendations
 
 Redux Effects give a clear pipeline for handling these.
 
-## ✅ **4. Many components depend on the SAME state**
+#### ✅ **4. Many components depend on the SAME state**
 
 If state is shared like:
 
@@ -862,7 +846,7 @@ Settings → Profile info
 Duplicating this logic becomes messy.
 Redux keeps it centralized.
 
-## ✅ **5. You want strict architecture in a large team**
+#### ✅ **5. You want strict architecture in a large team**
 
 NgRx enforces:
 
@@ -873,7 +857,7 @@ NgRx enforces:
 
 It removes “creative freedom” in a big team and ensures consistent structure.
 
-## 🏢 **Typical Use Cases**
+#### 🏢 **Typical Use Cases**
 
 - ✔ Enterprise Applications
 - ✔ Admin panels
@@ -883,7 +867,7 @@ It removes “creative freedom” in a big team and ensures consistent structure
 - ✔ Data-heavy dashboards
 - ✔ Apps with caching & offline support
 
-# 🔴 **When NOT to Use Redux (NgRx) in Angular**
+### 🔴 **When NOT to Use Redux (NgRx) in Angular**
 
 Redux is **overkill** when your app is small or simple.
 
@@ -891,7 +875,7 @@ Use the rule:
 
 > If your app is small and local state is enough → Do NOT use Redux.
 
-## ❌ **1. Small Apps / Simple UI**
+#### ❌ **1. Small Apps / Simple UI**
 
 Examples:
 
@@ -905,7 +889,7 @@ Using Redux here adds unnecessary complexity.
 
  
 
-## ❌ **2. You only need local state**
+#### ❌ **2. You only need local state**
 
 If state belongs *only to one component*:
 
@@ -919,7 +903,7 @@ This should stay inside the component.
 
  
 
-## ❌ **3. You can solve it with Angular Services**
+#### ❌ **3. You can solve it with Angular Services**
 
 Angular services with BehaviorSubject are easier when:
 
@@ -937,7 +921,7 @@ themeService.settings$
 
 Small teams → this is enough.
 
-## ❌ **4. Using Redux will slow down development**
+#### ❌ **4. Using Redux will slow down development**
 
 NgRx requires:
 
@@ -950,12 +934,12 @@ NgRx requires:
 For small use cases, this is a lot of boilerplate.
 
 
-## ❌ **5. You don’t have complex relationships**
+#### ❌ **5. You don’t have complex relationships**
 
 If your app is mostly “fetch and display” or “create and submit”, Redux is not necessary.
 
 
-# 🧠 **Simple Mentor Rule for Students**
+### 🧠 **Simple Mentor Rule for Students**
 
 Use Redux when:
 
@@ -977,7 +961,7 @@ Component-specific
 Simple service can solve it
 ```
 
-# 📝 **Summary Table**
+### 📝 **Summary Table**
 
 | Situation                           | Use Redux? | Why                         |
 | ----------------------------------- | ---------- | --------------------------- |
@@ -993,8 +977,6 @@ Simple service can solve it
 
  
 
-# 🎤 **Mentor Conclusion**
-
 Redux is like building a **Parliament** inside your Angular application:
 
 * Every change (Action) is publicly declared
@@ -1008,7 +990,7 @@ but unnecessary for **small pages or simple interactions**.
  
  
 
-# 🧩 **1. ASCII Decision Flowchart — “Should I use Redux?”**
+### 🧩 **1. ASCII Decision Flowchart — “Should I use Redux?”**
 
 ```
                            ┌──────────────────────────────┐
@@ -1088,9 +1070,9 @@ but unnecessary for **small pages or simple interactions**.
                                    └─────────────────┘
 ```
 
-# 🎯 **2. Clean Decision Rules for Slides**
+### 🎯 **2. Clean Decision Rules for Slides**
 
-### ✔ **Choose Redux (NgRx) if:**
+#### ✔ **Choose Redux (NgRx) if:**
 
 * Data is shared across **many components**
 * State is **global, complex, or long-lived**
@@ -1100,7 +1082,7 @@ but unnecessary for **small pages or simple interactions**.
 * You want a **strict architecture for a large team**
 * App is **enterprise-scale** (eCommerce, Admin Panels, Banking)
 
-### ❌ **Avoid Redux if:**
+#### ❌ **Avoid Redux if:**
 
 * App is **small or simple**
 * State is **local to one component**
@@ -1108,9 +1090,6 @@ but unnecessary for **small pages or simple interactions**.
 * You want **fast development**
 * No need for action logs or time-travel debugging
 * Business logic is **minimal**
-
-
-# 🧙‍♂️ **Mentor Teaching Shortcut**
 
 Teach students this simple mantra:
 
